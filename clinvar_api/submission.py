@@ -7,7 +7,7 @@ import xlrd
 import datetime
 import json
 import requests
-
+import numpy
 
 allowed_clinical_significance_descriptions = [
     'Pathogenic',
@@ -48,6 +48,17 @@ def generate_excel_colmap(end_after="CS"):
         if stop:
             break
     return {out[i]: i for i in range(len(out))}
+
+# def write_submitted_csv(submission_response:dict, filename="submitted-log.csv"):
+#     if len(submission_response["actions"]) > 1:
+#         print(json.dumps(submission_response))
+#         raise RuntimeError("more than 1 action in response")
+#     action = submission_response["actions"][0]
+#     with open(filename, "a") as f:
+#         line="\t".join(
+#             action["id"],
+
+#         )
 
 
 def parse_citations(s: str):
@@ -95,10 +106,14 @@ def makedir_if_not_exists(dirname: str):
 def row_to_clinvar_submission(row: pandas.Series, prettyjson=True):
     row_idx = row.name
     # misc fields
-    submission_name = "PAHVCEP_10_2020_API"
+    # submission_name = "PAHVCEP_10_2020_API"
+    submission_name = "MyeloMalig_20200114_API"
     local_id = row["A"]
     local_key = row["B"]
-    record_status = "novel"
+    # record_status = "novel"
+    record_status = row["CR"].replace(numpy.nan, "novel") # novel or update
+    if record_status is None:
+        record_status = "novel"
     release_status = "public"
     # variantSet
     variant_set = {
@@ -131,11 +146,17 @@ def row_to_clinvar_submission(row: pandas.Series, prettyjson=True):
     }]
     # assertionCriteria
     # TODO using hardcoded assertion method and citation for now, update to generalize
+    # assertion_criteria = {
+    #     "citation": {
+    #         "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+    #     },
+    #     "method": "ClinGen PAH ACMG Specifications v1"
+    # }
     assertion_criteria = {
         "citation": {
-            "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+            "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
         },
-        "method": "ClinGen PAH ACMG Specifications v1"
+        "method": "ClinGen MyeloMalig ACMG Specifications v1"
     }
     doc = {
         "clinvarSubmission": [{
@@ -157,13 +178,21 @@ def row_to_clinvar_submission(row: pandas.Series, prettyjson=True):
         }],
         "submissionName": submission_name
     }
+    if record_status == "update":
+        clinvar_accession = row["CQ"]
+        if clinvar_accession is None or len(clinvar_accession) == 0:
+            raise RuntimeError("accession (column CQ) must be provided for updates (%s)" % doc)
+        doc["clinvarSubmission"][0]["clinvarAccession"] = clinvar_accession
+
     makedir_if_not_exists("submissions")
     with open("submissions/submission-%s-%s.json" % (row_idx, local_id), "w") as f_out:
         indent = None
         if prettyjson:
             indent = 4
         json.dump(doc, f_out, indent=indent)
+        print("Saved submission to " + f_out.name)
     return doc
+
 
 
 def handle_submission_failure(response):
@@ -195,20 +224,31 @@ def do_submit(submission_json: dict, api_key: str, submission_url="https://submi
         data=json.dumps(data),
         headers=headers
     )
+    response_content = response.content.decode("UTF-8")
+    # Write response to file with name submissionName_localid[_localid ...]
+    if not os.path.isdir("responses"):
+        os.mkdir("responses")
+    entry_identifier = submission_json["submissionName"] + "_" + "_".join(s["localID"] for s in submission_json["clinvarSubmission"])
+    with open(os.path.join("responses", entry_identifier), "w") as f_out:
+        import datetime
+        json.dump({
+                "timestamp": datetime.datetime.isoformat(datetime.datetime.now()),
+                "status": response.status_code,
+                "content": response_content
+            },
+            f_out,
+            indent=2)
     if response.status_code not in [200, 201]:
         handle_submission_failure(response)
-        return False  # unreachable with exception in handle_submission_failure
+        return (False, response_content)  # unreachable with exception in handle_submission_failure
     else:
         print("Successful submission")
-    return True
+        print("Response code {}".format(response.status_code))
+        for k, v in response.headers.items():
+            print("< {}: {}".format(k, v))
+        print(response_content)
+        return (True, response_content)
 
-
-# input_filename = "ClinVar_Submission_ClinGen_PAHVCEP_10_2020.xlsx"
-# excel_col_labels = [e[0] for e in sorted(generate_excel_colmap().items(), key=lambda e: e[1])]
-# df = pandas.read_excel(input_filename, header=None, names=excel_col_labels, sheet_name="Variant")
-# # df = all_as_string(df)
-# df = df[6:] # ClinVar excel has 6 leading rows 0 through 5 including 5
-# df_json = df.apply(row_to_clinvar_submission, axis=1)
 
 def str_to_bool(s):
     if s == "false":
@@ -282,7 +322,8 @@ def main(argv):
 if __name__ == "__main__":
     argv = [
         "generate",
-        "--filename", "ClinVar_Submission_ClinGen_PAHVCEP_10_2020.xlsx"
+        # "--input-file", "ClinVar_Submission_ClinGen_PAHVCEP_10_2020.xlsx"
+        "--input-file", "ClinVar_Submission_RUNX1_01122021.xlsx"
     ]
     argv = sys.argv[1:]
 
