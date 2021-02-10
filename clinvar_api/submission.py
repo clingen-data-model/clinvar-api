@@ -249,8 +249,8 @@ def do_submit(submission: dict, api_key: str, submission_url="https://submit.ncb
         "Content-Type": "application/json",
         "SP-API-KEY": api_key
     }
-    print("post")
-    print(json.dumps(headers, indent=4))
+    print("POST {}".format(submission_url))
+    # print(json.dumps(headers, indent=4))
     print(json.dumps(data, indent=4))
     response = requests.post(
         submission_url,
