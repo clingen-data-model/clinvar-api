@@ -1,0 +1,60 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:19808697"
+                    },
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/c20346bb-711e-4d5f-bf45-8f14822fa448"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Likely pathogenic",
+                "comment": "This missense variant has not been reported in gnomAD (v2 and v3) [PM2]. It has been reported as a germline variant by SCV001203102.1 in a proband (70s) with thrombocytopenia and anemia; however, the germline origins were not confirmed in this case and all other reports of the variant (PMID: 19808697, 22689681, 24523240, 24659740, 25592059, 26273060, 27220669, 27534895, 28659335, 28933735, 30373888, 31649132, 32045476, 32208489, COSMIC). The variant is located at a residue that directly contacts DNA (PMID: 11276260, 12377125, 12393679, 12807882, 19808697, 28231333) and is considered a hotspot residue (PMID: 31648317, 27294619, 23958918), especially from a somatic perspective (PMID: 32208489) [PM1]. Although this variant has not been functionally evaluated, computational evidence supports a deleterious effect of this variant [PP3] and another missense variant at the same residue (i.e. p.R162G) is classified as likely pathogenic by the ClinGen MM-VCEP [PM5_supporting]. In summary, this variant meets criteria to be classified as likely pathogenic. ACMG/AMP criteria applied, as specified by the ClinGen Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PM1, PM2, PM5_supporting, and PP3.",
+                "dateLastEvaluated": "2021-01-12",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "c20346bb-711e-4d5f-bf45-8f14822fa448",
+            "localKey": "c20346bb-711e-4d5f-bf45-8f14822fa448",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34880580C>T"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

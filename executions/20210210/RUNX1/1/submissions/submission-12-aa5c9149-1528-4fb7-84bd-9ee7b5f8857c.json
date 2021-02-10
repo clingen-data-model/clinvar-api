@@ -1,0 +1,60 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:23817177"
+                    },
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/aa5c9149-1528-4fb7-84bd-9ee7b5f8857c"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Benign",
+                "comment": "The NM_001754.4:c.179C>T variant that results in the Ala60Val missense change has an MAF of 0.0002950 (0.02%, 10/33902 alleles) in the Latino subpopulation of the gnomAD v2.1.1 cohort, which is between 0.00015 (0.015%) and 0.0015 (0.15%) (BS1). Transactivation assays demonstrate normal transactivation (80-115% of wt) and data from a secondary EMSA demonstrate normal DNA binding (BS3; PMID: 23817177). The variant has not been reported in the germ line of patients with familial platelet disorder with predisposition to hematologic malignancies in the literature, to the best of our knowledge. In summary, this variant meets criteria to be classified as benign. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: BS1, BS3.",
+                "dateLastEvaluated": "2021-01-11",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "aa5c9149-1528-4fb7-84bd-9ee7b5f8857c",
+            "localKey": "aa5c9149-1528-4fb7-84bd-9ee7b5f8857c",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34887015G>A"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

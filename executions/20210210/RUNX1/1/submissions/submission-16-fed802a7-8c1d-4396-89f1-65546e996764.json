@@ -1,0 +1,60 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:11830488"
+                    },
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/fed802a7-8c1d-4396-89f1-65546e996764"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Pathogenic",
+                "comment": "The NM_001754.4:c.861C>A (p.Tyr287Ter) variant is a nonsense variant that is predicted to introduce a premature stop codon and expected to result in nonsense-mediated mRNA decay (PVS1). This variant was found to co-segregate with disease in multiple affected family members, with seven meioses observed in one family (PP1_Strong; PMID: 11830488). This variant is completely absent from all population databases with at least 20x coverage for RUNX1 (PM2). The variant has been reported in one proband meeting at least one of the RUNX1-phenotypic criteria (PS4_ Supporting; PMID: 11830488). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PP1_Strong, PM2, PS4_Supporting.",
+                "dateLastEvaluated": "2021-01-11",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "fed802a7-8c1d-4396-89f1-65546e996764",
+            "localKey": "fed802a7-8c1d-4396-89f1-65546e996764",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34799407G>T"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/a5303f14-d570-492c-aaa8-b258e957fb6d"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Pathogenic",
+                "comment": "The c.567C>G (Tyr189Ter) variant is a nonsense variant that is predicted to introduce a premature stop codon in exon 5/8 and expected to result in nonsense-mediated mRNA decay (PVS1). This variant is completely absent from all population databases with at least 20x coverage for RUNX1 (gnomAD v2.1.1 and v3). This variant has been reported in one proband meeting at least one of the RUNX1- phenotypic criteria (PS4_ Supporting; PMID: 31309983). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PM2, PS4_Supporting.",
+                "dateLastEvaluated": "2021-01-11",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "a5303f14-d570-492c-aaa8-b258e957fb6d",
+            "localKey": "a5303f14-d570-492c-aaa8-b258e957fb6d",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34859520G>C"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

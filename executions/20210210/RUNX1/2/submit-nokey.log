@@ -1,0 +1,80 @@
+Submitting submissions/submission-36-87d59116-fa2c-4fed-9ae3-e8e796b881f2.json
+Submitting entries [['87d59116-fa2c-4fed-9ae3-e8e796b881f2']] for submission MyeloMalig_20210210_API
+post
+{
+    "Content-Type": "application/json",
+}
+{
+    "actions": [
+        {
+            "type": "AddData",
+            "targetDb": "clinvar",
+            "data": {
+                "content": {
+                    "clinvarSubmission": [
+                        {
+                            "assertionCriteria": {
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                                },
+                                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+                            },
+                            "clinicalSignificance": {
+                                "citation": [],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "dateLastEvaluated": "2020-10-14"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0011071"
+                                    }
+                                ]
+                            },
+                            "localID": "87d59116-fa2c-4fed-9ae3-e8e796b881f2",
+                            "localKey": "87d59116-fa2c-4fed-9ae3-e8e796b881f2",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "RUNX1"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000021.9:g.(?_35048832)_(35049298_?)del"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "submissionName": "MyeloMalig_20210210_API"
+                }
+            }
+        }
+    ]
+}
+Successful submission
+Response code 201
+< Date: Wed, 10 Feb 2021 21:45:58 GMT
+< Server: Apache
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Content-Type: application/json; charset=UTF-8
+< content-encoding: gzip
+< content-length: 45
+< Set-Cookie: ncbi_sid=29A2409BFA491343%5FC24ESID; Max-Age=31536000; Domain=.nih.gov; Path=/; $x-enc=URI_ENCODING
+< X-UA-Compatible: IE=Edge
+< X-XSS-Protection: 1; mode=block
+< Keep-Alive: timeout=5, max=100
+< Connection: Keep-Alive
+{"id":"SUB9060941"}

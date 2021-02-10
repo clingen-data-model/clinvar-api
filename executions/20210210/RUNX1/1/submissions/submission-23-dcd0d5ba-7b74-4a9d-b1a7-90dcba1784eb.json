@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/dcd0d5ba-7b74-4a9d-b1a7-90dcba1784eb"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Pathogenic",
+                "comment": "The c.171_223del (p.Leu58Profs*62) variant is a frameshift deletion variant that is predicted to introduce a premature stop codon and expected to result in nonsense-mediated mRNA decay (PVS1). In addition, this variant is completely absent from all population databases with at least 20x coverage for RUNX1 (PM2), and was identified in a a 65-year-old female tested due to \"thrombocytopenia with predisposition to AML\" (PS4_supporting; SCV000807767.1). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the ClinGen Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PS4_supporting, and PM2.",
+                "dateLastEvaluated": "2021-01-12",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "dcd0d5ba-7b74-4a9d-b1a7-90dcba1784eb",
+            "localKey": "dcd0d5ba-7b74-4a9d-b1a7-90dcba1784eb",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34886971_34887023del"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}
