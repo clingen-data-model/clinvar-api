@@ -102,16 +102,20 @@ def makedir_if_not_exists(dirname: str):
 #         df[col_name] = df[col_name].astype("string")
 #     return df
 
+def default_submission_name():
+    return "ClinGen_Submission_" + datetime.datetime.now().isoformat()
 
-def row_to_clinvar_submission(row: pandas.Series, prettyjson=True):
+def row_to_clinvar_submission(row: pandas.Series, submission_name=default_submission_name(), prettyjson=True):
+    """
+
+    """
     row_idx = row.name
     # misc fields
     # submission_name = "PAHVCEP_10_2020_API"
-    submission_name = "MyeloMalig_20200114_API"
+
     local_id = row["A"]
     local_key = row["B"]
-    # record_status = "novel"
-    record_status = row["CR"].replace(numpy.nan, "novel") # novel or update
+    record_status = row["CR"]#.replace(None, "novel") # novel or update
     if record_status is None:
         record_status = "novel"
     release_status = "public"
@@ -204,12 +208,16 @@ def handle_submission_failure(response):
         "Submission failed, HTTP status code {}".format(response.status_code))
 
 
-def do_submit(submission_json: dict, api_key: str, submission_url="https://submit.ncbi.nlm.nih.gov/api/v1/submissions/"):
+def do_submit(submission: dict, api_key: str, submission_url="https://submit.ncbi.nlm.nih.gov/api/v1/submissions/"):
+    print("Submitting entries [{}] for submission {}".format(
+        [csub["localID"] for csub in submission["clinvarSubmission"]],
+        submission["submissionName"]
+    ))
     data = {
         "actions": [{
             "type": "AddData",
             "targetDb": "clinvar",
-            "data": {"content": submission_json}
+            "data": {"content": submission}
         }]
     }
     headers = {
@@ -228,9 +236,8 @@ def do_submit(submission_json: dict, api_key: str, submission_url="https://submi
     # Write response to file with name submissionName_localid[_localid ...]
     if not os.path.isdir("responses"):
         os.mkdir("responses")
-    entry_identifier = submission_json["submissionName"] + "_" + "_".join(s["localID"] for s in submission_json["clinvarSubmission"])
+    entry_identifier = submission["submissionName"] + "_" + "_".join(s["localID"] for s in submission["clinvarSubmission"])
     with open(os.path.join("responses", entry_identifier), "w") as f_out:
-        import datetime
         json.dump({
                 "timestamp": datetime.datetime.isoformat(datetime.datetime.now()),
                 "status": response.status_code,
@@ -255,6 +262,13 @@ def str_to_bool(s):
         return False
     return True
 
+def pandas_df_without_nan(df: pandas.DataFrame, value:object=None) -> pandas.DataFrame:
+    """
+    Takes a pandas DataFrame, replaces the numpy.nan values with None.
+    Or with value specified with optional `value` kwarg.
+    """
+    return df.replace({numpy.nan: value})
+
 
 def main(argv):
     parser = argparse.ArgumentParser("clinvar_api.py")
@@ -265,6 +279,8 @@ def main(argv):
     generate_subparser = subparsers.add_parser("generate")
     generate_subparser.add_argument(
         "--input-file", required=True, help="ClinVar submission MS Excel file")
+    generate_subparser.add_argument(
+        "--submission-name", required=True, help="Submission name to use in request")
     generate_subparser.add_argument(
         "--prettyjson", default="true",
         choices=["true", "false"],
@@ -293,10 +309,16 @@ def main(argv):
             generate_excel_colmap().items(), key=lambda e: e[1])]
         df = pandas.read_excel(input_filename, header=None,
                                names=excel_col_labels, sheet_name="Variant")
-        df = df[6:]  # ClinVar excel has 6 leading rows 0 through 5 including 5
-        df_json = df.apply(row_to_clinvar_submission,
-                           axis=1,
-                           args=(opts.prettyjson,))
+        df = df[6:]  # ClinVar excel has 6 leading rows, 0 through 5 including 5
+
+        df = pandas_df_without_nan(df)
+        df_json = df.apply(
+            row_to_clinvar_submission,
+            axis=1,
+            prettyjson=opts.prettyjson,
+            submission_name=opts.submission_name
+        #    args=(opts.prettyjson,)
+        )
     elif opts.subcommand == "submit":
         with open(opts.key_file) as f:
             api_key = f.read().strip()
@@ -320,11 +342,13 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    argv = [
-        "generate",
-        # "--input-file", "ClinVar_Submission_ClinGen_PAHVCEP_10_2020.xlsx"
-        "--input-file", "ClinVar_Submission_RUNX1_01122021.xlsx"
-    ]
+    # Example
+    # argv = [
+    #     "generate",
+    #     "--input-file", "ClinVar_Submission_RUNX1_01122021.xlsx",
+    #     "--submission-name", "MyeloMalig_20200114_API"
+    # ]
+
     argv = sys.argv[1:]
 
     sys.exit(main(argv))
