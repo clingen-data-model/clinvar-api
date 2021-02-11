@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/9dc1b049-c6d6-4b8d-986a-d26ba361ec76"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Uncertain significance",
+                "comment": "This synonymous variant is predicted by SSF, MES, SpliceAI to lead to either no change/an increase/a decrease by no more than 10% in the canonical splice site score, and no putative cryptic splice sites are created (BP4). However, evolutionary conservation prediction algorithms predict the site as being conserved (PhyloP score = 3.39291 in GRCh37/3.78084 in GRCh38) and the variant is not the reference nucleotide in one primate and/or three mammal species. In summary, the clinical significance of this variant is uncertain. ACMG/AMP criteria applied, as specified by the ClinGen Myeloid Malignancy Variant Curation Expert Panel for RUNX1: BP4.",
+                "dateLastEvaluated": "2020-09-22",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "9dc1b049-c6d6-4b8d-986a-d26ba361ec76",
+            "localKey": "9dc1b049-c6d6-4b8d-986a-d26ba361ec76",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34834447G>A"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

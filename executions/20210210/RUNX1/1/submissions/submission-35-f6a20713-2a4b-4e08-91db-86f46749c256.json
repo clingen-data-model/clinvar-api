@@ -1,0 +1,65 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:22318203"
+                    },
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:25840971"
+                    },
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/f6a20713-2a4b-4e08-91db-86f46749c256"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Likely pathogenic",
+                "comment": "The NM_001754.4:c.315C>A (p.His105Gln) variant affects one of the residues (AA 105-204) within the RHD (PM1_Supporting). This variant is completely absent from all population databases with at least 20x coverage for RUNX1 (PM2). Transactivation assays demonstrating altered transactivation (<20% of wt, and/or reduced to levels similar to well-established pathogenic variants such as R201Q or R166Q) AND data from secondary assays demonstrate altered DNA binding and functional consequences in mouse model. (PS3; PMID: 22318203; PMID: 25840971). This missense variant has a REVEL score >0.75 (0.901) (PP3). All patients reported in literature with this variant were not confirmed as germline variants (PMID 22318203, PMID 29722345, PMID 25840971, PMID 24030381, PMID 19282830). In summary, this variant meets criteria to be classified as likely pathogenic. ACMG/AMP criteria applied, as specified by the ClinGen Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PS3, PM2, PP3, PM1_supporting.",
+                "dateLastEvaluated": "2021-01-12",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "f6a20713-2a4b-4e08-91db-86f46749c256",
+            "localKey": "f6a20713-2a4b-4e08-91db-86f46749c256",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "update",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34886879G>T"
+                    }
+                ]
+            },
+            "clinvarAccession": "SCV000965660.1"
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

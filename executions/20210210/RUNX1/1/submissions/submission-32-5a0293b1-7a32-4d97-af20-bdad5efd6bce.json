@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/5a0293b1-7a32-4d97-af20-bdad5efd6bce"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Benign",
+                "comment": "The c.552G>T variant predicts a synonymous change, Pro184= and has an MAF of 0.001654 (0.17%, 33/19954 alleles) in the East Asian subpopulation of the gnomAD v2.1.1 cohort and is \u2265 0.0015 (0.15%) (BA1). This synonymous variant is predicted by SSF and MES to lead to either an increase in the canonical splice site score or a decrease of the canonical splice site score by no more than 10% and no putative cryptic splice sites are created (BP4). In addition, evolutionary conservation prediction algorithms predict the site as not being highly conserved (PhyloP score -8.975 < 0.1) (BP7). In summary, this variant meets criteria to be classified as benign. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: BA1, BP4, BP7.",
+                "dateLastEvaluated": "2020-08-24",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "5a0293b1-7a32-4d97-af20-bdad5efd6bce",
+            "localKey": "5a0293b1-7a32-4d97-af20-bdad5efd6bce",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34859535C>A"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

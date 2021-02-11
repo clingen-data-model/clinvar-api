@@ -1,0 +1,84 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:12807882"
+                    },
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:19808697"
+                    },
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:11276260"
+                    },
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:12377125"
+                    },
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:27294619"
+                    },
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:12393679"
+                    },
+                    {
+                        "db": "PubMed",
+                        "id": "PMID:28231333"
+                    },
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/4df11a8a-66b6-4bf1-9ad2-b1edf5add537"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Likely pathogenic",
+                "comment": "This missense variant has not been reported in gnomAD (v2 and v3) [PM2]. Although it has not been clearly reported as a germline variant (PMID: 28855357, 28927163, 31649132, COSMIC), it is located at a residue that directly contacts DNA (PMID: 11276260, 12377125, 12393679, 12807882, 19808697, 28231333) and is considered a hotspot residue (PMID: 31648317, 27294619, 23958918) [PM1]. Although this variant has not been functionally evaluated, computational evidence supports a deleterious effect of this variant [PP3] and another missense variant at the same residue (i.e. p.R162G) is classified as likely pathogenic by the ClinGen MM-VCEP [PM5_supporting]. In summary, this variant meets criteria to be classified as likely pathogenic. ACMG/AMP criteria applied, as specified by the ClinGen Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PM1, PM2, PM5_supporting, and PP3.",
+                "dateLastEvaluated": "2021-01-12",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "4df11a8a-66b6-4bf1-9ad2-b1edf5add537",
+            "localKey": "4df11a8a-66b6-4bf1-9ad2-b1edf5add537",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34880579C>A"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

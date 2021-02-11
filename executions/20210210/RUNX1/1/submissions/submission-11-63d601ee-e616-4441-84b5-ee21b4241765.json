@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/63d601ee-e616-4441-84b5-ee21b4241765"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Likely benign",
+                "comment": "The NM_001754.4:c.54G>T variant that results in a Met18Ile missense change has an MAF of 0.0002403 (0.02%, 6/24966 alleles) in the African subpopulation of the gnomAD v2.1.1 cohort, which is between 0.00015 (0.015%) and 0.0015 (0.15%) (BS1). This variant meets criteria to be classified as likely benign based on BS1 alone with no contradictory evidence supporting pathogenicity. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: BS1.",
+                "dateLastEvaluated": "2021-01-11",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "63d601ee-e616-4441-84b5-ee21b4241765",
+            "localKey": "63d601ee-e616-4441-84b5-ee21b4241765",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.35048846C>A"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

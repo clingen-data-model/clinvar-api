@@ -102,6 +102,26 @@ def makedir_if_not_exists(dirname: str):
 #         df[col_name] = df[col_name].astype("string")
 #     return df
 
+def removenone(d):
+    """
+    Return d with null values removed from all k,v pairs in d and sub objects (list and dict only).
+
+    When invoked by external (non-recursive) callers, `d` should be a dict object, or else behavior is undefined.
+    """
+    if isinstance(d, dict):
+        # Recursively call removenone on values in case value is itself a dict
+        d = {k:removenone(v) for (k,v) in d.items()}
+        # Filter out k,v tuples where v is None
+        return dict(filter(lambda t: t[1] != None, d.items()))
+    elif isinstance(d, list):
+        # Recursively call removenone on values in case any is a dict
+        d = [removenone(v) for v in d]
+        # Filter out array values which are None
+        return list(filter(lambda e: e!=None, d))
+    else:
+        # Do not iterate into d
+        return d
+
 def default_submission_name():
     return "ClinGen_Submission_" + datetime.datetime.now().isoformat()
 
@@ -162,6 +182,7 @@ def row_to_clinvar_submission(row: pandas.Series, submission_name=default_submis
         },
         "method": "ClinGen MyeloMalig ACMG Specifications v1"
     }
+
     doc = {
         "clinvarSubmission": [{
             "assertionCriteria": assertion_criteria,
@@ -182,11 +203,15 @@ def row_to_clinvar_submission(row: pandas.Series, submission_name=default_submis
         }],
         "submissionName": submission_name
     }
+    # if clinsig_mode_of_inheritance is not None:
+    #     doc["clinvarSubmission"][0]["clinicalSignificance"]["modeOfInheritance"] = clinsig_mode_of_inheritance
     if record_status == "update":
         clinvar_accession = row["CQ"]
         if clinvar_accession is None or len(clinvar_accession) == 0:
             raise RuntimeError("accession (column CQ) must be provided for updates (%s)" % doc)
         doc["clinvarSubmission"][0]["clinvarAccession"] = clinvar_accession
+
+    doc = removenone(doc)
 
     makedir_if_not_exists("submissions")
     with open("submissions/submission-%s-%s.json" % (row_idx, local_id), "w") as f_out:
@@ -224,8 +249,8 @@ def do_submit(submission: dict, api_key: str, submission_url="https://submit.ncb
         "Content-Type": "application/json",
         "SP-API-KEY": api_key
     }
-    print("post")
-    print(json.dumps(headers, indent=4))
+    print("POST {}".format(submission_url))
+    # print(json.dumps(headers, indent=4))
     print(json.dumps(data, indent=4))
     response = requests.post(
         submission_url,
@@ -247,7 +272,7 @@ def do_submit(submission: dict, api_key: str, submission_url="https://submit.ncb
             indent=2)
     if response.status_code not in [200, 201]:
         handle_submission_failure(response)
-        return (False, response_content)  # unreachable with exception in handle_submission_failure
+        raise RuntimeError(response_content)  # unreachable with exception in handle_submission_failure
     else:
         print("Successful submission")
         print("Response code {}".format(response.status_code))
@@ -309,7 +334,7 @@ def main(argv):
             generate_excel_colmap().items(), key=lambda e: e[1])]
         df = pandas.read_excel(input_filename, header=None,
                                names=excel_col_labels, sheet_name="Variant")
-        df = df[6:]  # ClinVar excel has 6 leading rows, 0 through 5 including 5
+        df = df[5:]  # ClinVar excel has 5 leading rows, 0 through 4 including 4
 
         df = pandas_df_without_nan(df)
         df_json = df.apply(

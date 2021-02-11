@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/f05ad36f-9e55-4a1c-bfbc-871c8a66f2fb"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Uncertain significance",
+                "comment": "NM_001754.4:c.105C>T (p.Ser35=) is a synonymous variant and is completely absent from all population databases with at least 20x coverage for RUNX1 (PM2). This synonymous variant is predicted by SSF and MES to lead to either an increase in the canonical splice site score or a decrease of the canonical splice site score by no more than 10% and no putative cryptic splice sites are created (BP4).The variant has not been reported in patients with familial platelet disorder with predisposition to hematologic malignancies in the literature, to the best of our knowledge. In summary, the clinical significance of this variant is uncertain. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PM2, BP4.",
+                "dateLastEvaluated": "2021-01-11",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "f05ad36f-9e55-4a1c-bfbc-871c8a66f2fb",
+            "localKey": "f05ad36f-9e55-4a1c-bfbc-871c8a66f2fb",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34887089G>A"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

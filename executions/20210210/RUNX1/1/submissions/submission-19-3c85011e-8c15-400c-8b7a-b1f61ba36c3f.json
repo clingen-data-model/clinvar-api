@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/3c85011e-8c15-400c-8b7a-b1f61ba36c3f"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Benign",
+                "comment": "This synonymous variant is present in gnomAD (v2 and v3) at an allele frequency >0.15% with at least 5 alleles in any general continental population (BA1); in addition, the variant was found in homozygosity in the population database (BP2). Although the variant is predicted by SSF and MES to create a putative cryptic donor splice site at c.925 (insignificant prediction by SpliceAI), evolutionary conservation prediction algorithms predict the site as being weakly conserved (PhyloP score: 1.25 > 0.1 [-14.1;6.4]), and the variant is not the reference nucleotide in one primate and/or three mammal species, SSF and MES predict either an increase in the canonical splice site score or a decrease of the canonical splice site score by no more than 10%. In summary, the clinical significance of this variant is benign. ACMG/AMP criteria applied, as specified by the ClinGen Myeloid Malignancy Variant Curation Expert Panel for RUNX1: BA1 and BP2.",
+                "dateLastEvaluated": "2021-01-12",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "3c85011e-8c15-400c-8b7a-b1f61ba36c3f",
+            "localKey": "3c85011e-8c15-400c-8b7a-b1f61ba36c3f",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34799341G>A"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

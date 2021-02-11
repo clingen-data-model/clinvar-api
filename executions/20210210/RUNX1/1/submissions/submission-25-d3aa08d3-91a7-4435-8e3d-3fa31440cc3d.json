@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/d3aa08d3-91a7-4435-8e3d-3fa31440cc3d"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Likely pathogenic",
+                "comment": "This late frameshift duplication is not expected to result in nonsense mediated mRNA decay, but will alter the transactivation domain/inhibitory domain/VWRPY motif and elongate the protein [PVS1_strong]. It is absent from gnomAD (v2 and v3) [PM2]. Although it has not been described, it is of note that other C-terminal frameshift variants have been reported with some showing loss of transactivation ability and a dominant-negative effect (PMID: 14615365, 19808697, 25840971). In summary, the clinical significance of this variant is likely pathogenic. ACMG/AMP criteria applied, as specified by the ClinGen Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1_strong and PM2.",
+                "dateLastEvaluated": "2021-01-12",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "d3aa08d3-91a7-4435-8e3d-3fa31440cc3d",
+            "localKey": "d3aa08d3-91a7-4435-8e3d-3fa31440cc3d",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34792347_34792350dup"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}
