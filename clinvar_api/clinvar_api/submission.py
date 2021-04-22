@@ -16,6 +16,9 @@ from clinvar_api.generate import (
 
 
 def handle_request_failure(response: requests.Response):
+    """
+    Prints the status code and headers of the response and throws runtime error.
+    """
     print("< status={}".format(response.status_code))
     for k, v in response.headers.items():
         print("< {}: {}".format(k, v))
@@ -58,6 +61,7 @@ def do_submit(submission: dict, api_key: str, submission_url="https://submit.ncb
         "SP-API-KEY": api_key
     }
     print("POST {}".format(submission_url))
+    # NOTE if process stdout is being logged, sensitive headers may be included.
     # print(json.dumps(headers, indent=4))
     print(json.dumps(data, indent=4))
     response = requests.post(
@@ -87,6 +91,7 @@ def do_submit(submission: dict, api_key: str, submission_url="https://submit.ncb
         for k, v in response.headers.items():
             print("< {}: {}".format(k, v))
         print(response_content)
-        return (True, response_content)
+        response_object = json.loads(response_content)
+        return (True, response_object)
 
 
