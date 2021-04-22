@@ -1,0 +1,7 @@
+# editor files
+.idea/
+.vscode/
+.DS_Store
+
+# build outputs
+**/__pycache__/
