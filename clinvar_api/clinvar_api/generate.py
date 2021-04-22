@@ -1,5 +1,8 @@
 import datetime
 import pandas
+import json
+
+from clinvar_api.util import makedir_if_not_exists
 
 allowed_clinical_significance_descriptions = [
     'Pathogenic',
@@ -90,7 +93,11 @@ def removenone(d):
 def default_submission_name():
     return "ClinGen_Submission_" + datetime.datetime.now().isoformat()
 
-def row_to_clinvar_submission(row: pandas.Series, submission_name=default_submission_name(), prettyjson=True):
+def row_to_clinvar_submission(
+    row: pandas.Series,
+    assertion_criteria: dict,
+    submission_name=default_submission_name(),
+    prettyjson=True):
     """
 
     """
@@ -133,21 +140,8 @@ def row_to_clinvar_submission(row: pandas.Series, submission_name=default_submis
         "affectedStatus": row["AZ"],
         "numberOfIndividuals": 0
     }]
-    # assertionCriteria
-    # TODO using hardcoded assertion method and citation for now, update to generalize
-    # assertion_criteria = {
-    #     "citation": {
-    #         "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
-    #     },
-    #     "method": "ClinGen PAH ACMG Specifications v1"
-    # }
-    assertion_criteria = {
-        "citation": {
-            "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
-        },
-        "method": "ClinGen MyeloMalig ACMG Specifications v1"
-    }
 
+    # assertionCriteria is taken from caller
     doc = {
         "clinvarSubmission": [{
             "assertionCriteria": assertion_criteria,

@@ -12,6 +12,7 @@ from clinvar_api.submission import (
 )
 from clinvar_api.generate import generate_excel_colmap
 from clinvar_api.util import (str_to_bool, pandas_df_without_nan)
+from clinvar_api.validate import validate_batch_submission
 
 def main(argv):
     parser = argparse.ArgumentParser("clinvar_api.py")
@@ -24,6 +25,10 @@ def main(argv):
         "--input-file", required=True, help="ClinVar submission MS Excel file")
     generate_subparser.add_argument(
         "--submission-name", required=True, help="Submission name to use in request")
+    generate_subparser.add_argument(
+        "--assertion-criteria-url", required=True, help="URL for assertion criteria document")
+    generate_subparser.add_argument(
+        "--assertion-criteria-name", required=True, help="Display name for the assertion criteria document")
     generate_subparser.add_argument(
         "--prettyjson", default="true",
         choices=["true", "false"],
@@ -43,25 +48,39 @@ def main(argv):
         default="https://submit.ncbi.nlm.nih.gov/api/v1/submissions/",
         help="URL to POST submission data to")
 
+    # assertion_criteria = {
+    #     "citation": {
+    #         "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+    #     },
+    #     "method": "ClinGen MyeloMalig ACMG Specifications v1"
+    # }
+
     opts = parser.parse_args(argv)
 
     if opts.subcommand == "generate":
         input_filename = opts.input_file
         opts.prettyjson = str_to_bool(opts.prettyjson)
+        assertion_criteria = {
+            "citation": {"url": opts.assertion_criteria_url},
+            "method": opts.assertion_criteria_name
+        }
+
         excel_col_labels = [e[0] for e in sorted(
             generate_excel_colmap().items(), key=lambda e: e[1])]
         df = pandas.read_excel(input_filename, header=None,
                                names=excel_col_labels, sheet_name="Variant")
-        df = df[5:]  # ClinVar excel has 5 leading rows, 0 through 4 including 4
+        df = df[5:]  # ClinVar excel has 5 leading rows, 0-based indexes 0 through 4 including 4
 
         df = pandas_df_without_nan(df)
         df_json = df.apply(
             row_to_clinvar_submission,
             axis=1,
+            assertion_criteria=assertion_criteria,
             prettyjson=opts.prettyjson,
             submission_name=opts.submission_name
         #    args=(opts.prettyjson,)
         )
+
     elif opts.subcommand == "submit":
         with open(opts.key_file) as f:
             api_key = f.read().strip()
