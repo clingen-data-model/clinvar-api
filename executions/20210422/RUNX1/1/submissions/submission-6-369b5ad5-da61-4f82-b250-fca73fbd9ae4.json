@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/369b5ad5-da61-4f82-b250-fca73fbd9ae4"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Pathogenic",
+                "comment": "The c.610C>T (Arg204Ter) variant is a nonsense variant that is predicted to introduce a premature stop codon in exon 5/8 and expected to result in nonsense-mediated mRNA decay (PVS1). It is completely absent from gnomAD v2.1.1 and v3 with at least 20x coverage for RUNX1 (PM2). This variant has been reported in three probands meeting at least one of the RUNX1- phenotypic criteria (PS4_Moderate; PMID: 32165484, 10508512, 26492932). It was also found to co-segregate with disease in multiple affected family members, with eight meioses observed in across 3 families (PP1_Strong; PMID: 10508512, 26492932 , 32165484). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PP1_Strong, PS4_Moderate, PM2.",
+                "dateLastEvaluated": "2021-01-11",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "369b5ad5-da61-4f82-b250-fca73fbd9ae4",
+            "localKey": "369b5ad5-da61-4f82-b250-fca73fbd9ae4",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34859477G>A"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}
