@@ -48,23 +48,33 @@ def do_status_check(sub_id: str, api_key: str, submission_url="https://submit.nc
     print("GET " + url)
     response = requests.get(url, headers=headers)
     response_content = response.content.decode("UTF-8")
+    for k,v in response.headers.items():
+        print("< %s: %s" % (k, v))
+    print(response_content)
     if response.status_code not in [200]:
         raise RuntimeError("Status check failed:\n" + str(headers) + "\n" + url + "\n" + response_content)
 
     status_response = json.loads(response_content)
 
     # Load summary file
-    summary_files = status_response["actions"][0]["responses"][0]["files"]
-    for f in summary_files:
-        url = f["url"]
-        print("GET " + url)
-        f_response = requests.get(url, headers=headers)
-        f_response_content = f_response.content.decode("UTF-8")
-        if f_response.status_code not in [200]:
-            raise RuntimeError("Status check summary file fetch failed:\n%s\n%s\n%s" % (
-                                str(headers), url, f_response_content))
-        file_content = json.loads(f_response_content)
-        f["value"] = file_content
+    action = status_response["actions"][0]
+    print("Submission %s status %s" % (sub_id, action["status"]))
+    responses = action["responses"]
+    if len(responses) == 0:
+        print("Status 'responses' field had no items, check back later")
+    else:
+        print("Status response had one or more responses, attempting to retrieve any files listed")
+        summary_files = responses[0]["files"]
+        for f in summary_files:
+            url = f["url"]
+            print("GET " + url)
+            f_response = requests.get(url, headers=headers)
+            f_response_content = f_response.content.decode("UTF-8")
+            if f_response.status_code not in [200]:
+                raise RuntimeError("Status check summary file fetch failed:\n%s\n%s\n%s" % (
+                                    str(headers), url, f_response_content))
+            file_content = json.loads(f_response_content)
+            f["value"] = file_content
 
     return status_response
 
