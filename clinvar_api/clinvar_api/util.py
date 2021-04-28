@@ -29,4 +29,3 @@ def pandas_df_without_nan(df: pandas.DataFrame, value:object=None) -> pandas.Dat
     Or with value specified with optional `value` kwarg.
     """
     return df.replace({numpy.nan: value})
-

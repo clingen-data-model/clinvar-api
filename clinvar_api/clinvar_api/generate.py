@@ -2,7 +2,6 @@ import datetime
 import pandas
 import json
 
-from clinvar_api.util import makedir_if_not_exists
 
 allowed_clinical_significance_descriptions = [
     'Pathogenic',
@@ -43,6 +42,22 @@ def generate_excel_colmap(end_after="CS"):
         if stop:
             break
     return {out[i]: i for i in range(len(out))}
+
+def parse_curie(s: str):
+    """
+    Takes a CURIE formatted string and returns the namespace and identifier in a tuple.
+    If multiple colons appear in the string, the first is taken to be the delimiter.
+    Does not allow empty namespace elements (s starts with colon).
+    """
+    if ":" in s:
+        cidx = s.index(":")
+        if cidx == 0:
+            raise RuntimeError("CURIE namespace element is empty")
+        ns = s[:cidx]
+        value = s[cidx+1:]
+        return (ns, value)
+    else:
+        raise RuntimeError("Could not parse CURIE: " + s)
 
 def parse_citations(s: str):
     """
@@ -96,14 +111,14 @@ def default_submission_name():
 def row_to_clinvar_submission(
     row: pandas.Series,
     assertion_criteria: dict,
-    submission_name=default_submission_name(),
-    prettyjson=True):
+    submission_name=default_submission_name()):
     """
-
+    Takes a subscriptable object (dict or pandas.Series, or similar) with ClinVar
+    Submission Excel fields, and converts it into a ClinVar Submission API record,
+    meeting the API schema for objects under `clinvarSubmission`.
     """
-    row_idx = row.name
+    # row_idx = row.name
     # misc fields
-    # submission_name = "PAHVCEP_10_2020_API"
 
     local_id = row["A"]
     local_key = row["B"]
@@ -127,7 +142,9 @@ def row_to_clinvar_submission(
     }
     # clinicalSignificance
     clinsig_description = normalize_clinical_significance_description(row["AK"])
-    clinsig_date_last_evaluated = serialize_date(row["AL"])
+    # clinsig_date_last_evaluated = serialize_date(row["AL"])
+    # Date has already been serialized to YYYY-mm-dd
+    clinsig_date_last_evaluated = row["AL"]
     clinsig_mode_of_inheritance = row["AO"]
     clinsig_comment = row["AR"]
     clinsig_citations = parse_citations(row["AP"])
@@ -143,24 +160,21 @@ def row_to_clinvar_submission(
 
     # assertionCriteria is taken from caller
     doc = {
-        "clinvarSubmission": [{
-            "assertionCriteria": assertion_criteria,
-            "clinicalSignificance": {
-                "citation": clinsig_citations,
-                "clinicalSignificanceDescription": clinsig_description,
-                "comment": clinsig_comment,
-                "dateLastEvaluated": clinsig_date_last_evaluated,
-                "modeOfInheritance": clinsig_mode_of_inheritance
-            },
-            "conditionSet": condition_set,
-            "localID": local_id,
-            "localKey": local_key,
-            "observedIn": observed_in,
-            "recordStatus": record_status,
-            "releaseStatus": release_status,
-            "variantSet": variant_set
-        }],
-        "submissionName": submission_name
+        "assertionCriteria": assertion_criteria,
+        "clinicalSignificance": {
+            "citation": clinsig_citations,
+            "clinicalSignificanceDescription": clinsig_description,
+            "comment": clinsig_comment,
+            "dateLastEvaluated": clinsig_date_last_evaluated,
+            "modeOfInheritance": clinsig_mode_of_inheritance
+        },
+        "conditionSet": condition_set,
+        "localID": local_id,
+        "localKey": local_key,
+        "observedIn": observed_in,
+        "recordStatus": record_status,
+        "releaseStatus": release_status,
+        "variantSet": variant_set
     }
     # if clinsig_mode_of_inheritance is not None:
     #     doc["clinvarSubmission"][0]["clinicalSignificance"]["modeOfInheritance"] = clinsig_mode_of_inheritance
@@ -168,15 +182,42 @@ def row_to_clinvar_submission(
         clinvar_accession = row["CQ"]
         if clinvar_accession is None or len(clinvar_accession) == 0:
             raise RuntimeError("accession (column CQ) must be provided for updates (%s)" % doc)
-        doc["clinvarSubmission"][0]["clinvarAccession"] = clinvar_accession
+        doc["clinvarAccession"] = clinvar_accession
 
+    # Remove any fields for which the value is None, or any list elements that are None
     doc = removenone(doc)
+    return doc
 
-    makedir_if_not_exists("submissions")
-    with open("submissions/submission-%s-%s.json" % (row_idx, local_id), "w") as f_out:
-        indent = None
-        if prettyjson:
-            indent = 4
-        json.dump(doc, f_out, indent=indent)
-        print("Saved submission to " + f_out.name)
+def dataframe_to_list(df: pandas.DataFrame) -> list:
+    """
+    Use caution with datetime columns, as they may not be de/serialized as desired
+    """
+    return json.loads(df.to_json(orient="records"))
+
+def dataframe_to_clinvar_submission_list(
+        df: pandas.DataFrame,
+        assertion_criteria: dict,
+        submission_name: str) -> dict:
+    input_records = dataframe_to_list(df)
+    print(input_records)
+    submission_records = []
+
+    for record in input_records:
+        submission_record = row_to_clinvar_submission(record, assertion_criteria, submission_name)
+        submission_records.append(submission_record)
+
+    return submission_records
+
+def dataframe_to_clinvar_submission(
+        df: pandas.DataFrame,
+        assertion_criteria: dict,
+        submission_name: str) -> dict:
+    """
+    Takes a ClinVar submission excel dataframe and returns a batch ClinVar Submission dictionary.
+    """
+    records = dataframe_to_clinvar_submission_list(df, assertion_criteria, submission_name)
+    doc = {
+        "clinvarSubmission": records,
+        "submissionName": submission_name
+    }
     return doc
