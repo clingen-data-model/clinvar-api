@@ -1,0 +1,2151 @@
++ python clinvar_api/main.py submit --file submissions/submission-ALL-ClinGen_PAH_20210428_API_TEST.json --key-file clinvar_key_pah_vcep.txt
+Submitting submissions/submission-ALL-ClinGen_PAH_20210428_API_TEST.json
+Submitting entries [['6b585b6d-6670-47ac-ac87-8f2ff3ab55fd', 'fb82abb9-c0f3-4901-acad-0e2a6de4b34d', '5a4488b7-d663-48dd-bf7b-106a42346d82', '0b5b1397-d24f-4369-b608-dd9d8cdb4d08', '00b68297-2f63-4952-bc0d-108c6dfecefb', 'c54336ad-7a33-4a07-895c-275c08ab017c', '340b253a-4f3c-45ed-aef4-8e02574c8109', '5c41ff75-cc92-448f-8fbd-6718561a4dac', '5391784e-1cfd-43f5-8aba-6f02c44d57b2', 'bfb0df54-1132-4767-9598-0268a4485799', '93378ff3-a0f5-476d-9386-3bbd7a51e0f0', 'dd4c9b27-d04f-4738-bae3-de4d0ef5faad', 'b8a375eb-ab64-4ae6-9596-fb9df15defac', 'eb3c68df-9fa2-461a-bce2-76e53507656b', 'a93e52bd-88fe-43c5-b618-e25cef43653f', '854f6ce8-5399-491b-9988-4dcb77d81850', 'fedc6e34-dce3-4144-87eb-a4c1c6379ffb', 'bd85901e-db8a-41a6-9f31-0446df09589d', 'f5286ec2-51ad-4be7-9a8c-bdc402eceba6', '4ad11597-d41e-45b6-917a-849787630c2a', '30d2b670-3555-4ff4-8b51-001ee0d9d0d3', '43c0e463-29fc-4579-ad14-55bf5d1fab63', '0c78dc36-0ebe-4bea-9d50-6ff0856bbb8f', '33ecfb68-253a-4ef9-a345-1da8c398b15d', '9a6918e9-715e-4432-9857-2279bf43050a', 'deb05865-1cb0-4972-95ae-59e2da8df3a4', '81e99b34-e26c-4f1b-af94-b863ba7c1e11', '19dc340b-f7df-4865-bba3-db4b17bddcab', 'e4cbab06-2651-41ac-ae9f-526351a9e939', '1bf52a23-a03e-4000-871d-889b26af8ff3', '6fa09283-e4f3-458b-aec9-b227b83fd0f3', 'fe18266f-4396-4995-aee4-caccb06c4bae', '9c21c34e-abd4-41c0-bf30-c1cedc8e886e', 'f2624763-823a-4fd6-8c79-8ac6793bf2f5', '40d1617a-1556-4d96-80b5-f6a005e3f3e0', '8de0de63-abcc-463d-ad96-ba40efd5b321', '533dfef9-f4fd-434d-8d70-23d08956adf3', '17a486f7-ffbd-4259-8b78-60b54b661011', '9f1f84a2-314e-4b28-9b13-a38f3a946493', '53198f23-8d86-4dfe-be5d-9849e4d7bfc2']] for submission ClinGen_PAH_20210428_API_TEST
+POST https://submit.ncbi.nlm.nih.gov/api/v1/submissions/
+{
+    "actions": [
+        {
+            "type": "AddData",
+            "targetDb": "clinvar",
+            "data": {
+                "content": {
+                    "clinvarSubmission": [
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/6b585b6d-6670-47ac-ac87-8f2ff3ab55fd"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "The NM_000277.3(PAH):c.*144A>G (ClinVar variant ID 657680) is a 3\u2019 UTR variant in PAH. The variant has been previously reported as a single heterozygous variant in a proband with classic PKU (PMID: 20188615), with plasma Phe 1105 umol/L; BH4 deficiency does not appear to have been formally excluded (PP4). The authors speculated that the variant could \u201ceither affect the half life of the mRNA or its translation efficiency,\u201d but did not perform functional validation studies. The variant was absent in the mother, who was unaffected, and present as a single heterozygous variant in the father, who was also unaffected. The authors were unable to detect a second variant in the (affected) proband, which they argued could be due to it being \u201clocated in PAH intronic regions not covered in the screening strategy.\u201d It has also been found as a single heterozygous variant in a screening study of 3,552 healthy Japanese adults (PMID: 30887117). In ClinVar (ClinVar variant ID 657680), it is classified as VUS by one lab and Likely Benign by one lab, based on the above literature reports and uncertain functional consequences. Four heterozygotes and zero homozygotes are present for the variant in gnomAD; corresponding to a global AF of 0.000127 and maximum population frequency of 0.00128 (East Asian population), less than the 0.002 frequency threshold for use of BS1 and greater than the 0.0002 frequency threshold for use of PM2. The variant is predicted to not significantly alter splicing by multiple predictors (Splice AI score 0.00, MaxEntScan score variation 0.00%) (BP4). Classification: VUS Supporting Criteria: PP4; BP4",
+                                "dateLastEvaluated": "2020-12-23",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "6b585b6d-6670-47ac-ac87-8f2ff3ab55fd",
+                            "localKey": "6b585b6d-6670-47ac-ac87-8f2ff3ab55fd",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102839031T>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:31623983"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:32106880"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:10394930"
+                                    },
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/fb82abb9-c0f3-4901-acad-0e2a6de4b34d"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.716G>T (p.Gly239Val) variant in PAH has been reported in 2 individuals with classic PKU (PMID 10394930, 31623983) detected with pathogenic variants p.R408W and IVS10\u201311g>a (PMID: 32106880). This variant has extremely low frequency in gnomAD (MAF=0.00006). Computational evidence supports a deleterious effect. In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PP4, PM2, PM3, PP3.",
+                                "dateLastEvaluated": "2020-10-23",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "fb82abb9-c0f3-4901-acad-0e2a6de4b34d",
+                            "localKey": "fb82abb9-c0f3-4901-acad-0e2a6de4b34d",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102852941C>A"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:1363837"
+                                    },
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/5a4488b7-d663-48dd-bf7b-106a42346d82"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.1092_1106del (p.Leu365_Leu369del) variant in PAH has been reported in 1 individual with PKU (PP4; PMID: 1363837) in trans with pathogenic variant p.R408W (PM3). This variant is absent in population databases (PM2). This variant is a 15 bp in-frame deletion in exon 11 (PM4). In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PP4, PM2, PM3, PM4.",
+                                "dateLastEvaluated": "2019-05-04",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "5a4488b7-d663-48dd-bf7b-106a42346d82",
+                            "localKey": "5a4488b7-d663-48dd-bf7b-106a42346d82",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102843739_102843753delAGCTCCAGGGGGAGA"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/0b5b1397-d24f-4369-b608-dd9d8cdb4d08"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.1220C>T (p.Pro407Leu) variant in PAH has been reported in multiple individuals with PAH deficiency (PMID: 9950317, 23357515, 23792259). This variant is absent in population databases. This variant was detected with pathogenic variants: p.F55fs (PMID: 9950317); p.Tyr414Cys (PMID: 23357515); p.Ala403Val (PMID: 23792259); and p.R408W (PMID: 24350308). Computational evidence is conflicting. In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PP4, PM2, PM3_strong.",
+                                "dateLastEvaluated": "2020-08-28",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "0b5b1397-d24f-4369-b608-dd9d8cdb4d08",
+                            "localKey": "0b5b1397-d24f-4369-b608-dd9d8cdb4d08",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102840495G>A"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:24401910"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:11935335"
+                                    },
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/00b68297-2f63-4952-bc0d-108c6dfecefb"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.-4165_-407del3759 deletion in PAH has been reported in 3 unrelated individuals/families with PAH deficiency where it was designated as -4173_-407del. (PMID: 11935335). The -4173_-407del nomenclature was based on the translation initiation site, and corresponds to c.-4165_-407del3759 (based on transcription initiation site). This deletion is absent from gnomAD genomes with good coverage. This variant was detected with pathogenic variants: p.R408Q in 2 unrelated patients; p.E286K in 2 patients (pathogenic by PAH VCEP); and p.E76G in 1 patient (PMID: 24401910). Functional evidence suggests that it diminishes PAH gene expression (retained only 1% of the wild-type CAT activity, PMID: 11935335). In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PP4, PM2, PM3_strong, PS3_supporting.",
+                                "dateLastEvaluated": "2020-08-28",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "00b68297-2f63-4952-bc0d-108c6dfecefb",
+                            "localKey": "00b68297-2f63-4952-bc0d-108c6dfecefb",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102917538_102921296del"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:29316886"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:26542770"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:28771436"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:26503515"
+                                    },
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/c54336ad-7a33-4a07-895c-275c08ab017c"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The c.532G>A (p.Glu178Lys) variant in PAH has been reported in multiple individuals with PAH deficiency (BH4 deficiency excluded). (PP4_Moderate; PMID: 26503515; PMID: 26542770). This variant has an extremely low allele frequency (PopMax MAF=0.00006, ENF) in gnomAD (PM2). This variant was detected in trans with F39del (PMID: 26542770) (Pathogenic/Likely Pathogenic in ClinVar by 7 submitters, see ID 188933). It has also been observed with R408W (PMID: 28771436, parental testing not performed) (Pathogenic in ClinVar (ID 577) and by ClinGen PAH VCEP) and IVS4-1G>A (PMID: 29316886, parental testing unclear) (Pathogenic in ClinVar (ID 594) and by ClinGen PAH VCEP). Computational prediction tools and conservation analysis are conflicting. This is a novel missense change at an amino acid residue where a different pathogenic missense change has been seen before (c.533A>G (p.Glu178Gly). In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PP4_Moderate, PM3_strong, PM2, PM5",
+                                "dateLastEvaluated": "2021-01-17",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "c54336ad-7a33-4a07-895c-275c08ab017c",
+                            "localKey": "c54336ad-7a33-4a07-895c-275c08ab017c",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102855310C>T"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/340b253a-4f3c-45ed-aef4-8e02574c8109"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The PAH variant c.969+1G>A (IVS9+1G>A) is a null variant (donor site) located in exon number 9 of the PAH gene. Loss of function in the PAH gene is a known mechanism of disease. Four null variants in exon 9 of the PAH gene have been reported. This variant is predicted to alter a region that is critical to protein function (13 pathogenic non-nonsense variants in the skipped exon have been reported). Exon skipping is not predicted to disrupt the reading frame. According to TraP in silico splicing prediction, this alteration is probably damaging (TraP score 0.968). HSF (-32.06% variation) and MaxEnt (-86.2% variation) agree that this alteration of the WT donor site most probably affects splicing. The PAH variant c.969+1G>A (IVS9+1G>A) was reported with the PAH pathogenic variant c.1222C>T (p.Arg408Trp) (ClinVar ID: 577) in a European patient with classical PKU (serum Phe levels above 1200\u03bcmol/L). Cofactor deficiency was excluded by the BH4 test (PMID: 10679941) and in a patient from Iran with classical PKU (serum Phe levels above 1200\u03bcmol/L) (PMID: 26413448). This variant is absent in the gnomAD, ExAC, and PAGE population databases. In summary, this variant meets the criteria to be classified as likely pathogenic. PAH-specific ACMG/AMP criteria applied: PM2, PM3_Supporting, PP4, and PVS1_Strong.",
+                                "dateLastEvaluated": "2020-04-21",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "340b253a-4f3c-45ed-aef4-8e02574c8109",
+                            "localKey": "340b253a-4f3c-45ed-aef4-8e02574c8109",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102846894C>T"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/5c41ff75-cc92-448f-8fbd-6718561a4dac"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.443G>T (p.Gly148Val) variant in PAH has been reported in multiple individuals with PKU (BH4 deficiency excluded). (PMID: 27121329, 26503515). This variant is absent in population databases (PM2). This variant was detected in trans with pathogenic variant p.Ser349Pro. Computational evidence supports a deleterious effect. In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PP4_Moderate, PM2, PM3, PP3.",
+                                "dateLastEvaluated": "2020-01-26",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "5c41ff75-cc92-448f-8fbd-6718561a4dac",
+                            "localKey": "5c41ff75-cc92-448f-8fbd-6718561a4dac",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102866662C>A"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/5391784e-1cfd-43f5-8aba-6f02c44d57b2"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The variant c.505C>G (p.R169G) in PAH has been detected in 2 Chinese patients and 1 Dutch patient with Phe levels >120 umol/l (PMID 26503515, 30050108, 31924462) (PP4-Moderate). This variant was detected in trans with pathogenic variants p.R243Q, p.R241Pfs*100; the validation tests on parents were performed using Sanger sequencing. Also found with pathogenic variant p.Y414C; parental testing not confirmed (PMID: 30050108, 31924462) (PM3-Strong). This variant is absent from controls in gnomAD, 1000 Genomes or ESP (PM2). Multiple lines of computational evidence support a deleterious effect: SIFT, PolyPhen2, and MutationTaster. REVEL score =0.848 (PP4). Missesense variant p.Arg169Ser interpreted as pathogenic by ClinGen PAH VCEP, located at the same amino acid residue (PM5). In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PP4-Moderate, PM3-Strong, PP3, PM5.",
+                                "dateLastEvaluated": "2021-02-12",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "5391784e-1cfd-43f5-8aba-6f02c44d57b2",
+                            "localKey": "5391784e-1cfd-43f5-8aba-6f02c44d57b2",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102866600G>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/bfb0df54-1132-4767-9598-0268a4485799"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.161T>C (p.Leu54Ser) variant in PAH is a missense variant that is predicted to be deleterious in multiple lines of computational evidence. This variant was reported in a Spanish patient with mild/moderate PKU. A defect in the synthesis or regeneration pathways of 6R-BH4 was ruled out by analyzing urinary pterin levels and measuring the dihydropteridine reductase activity (PMID: 27121329). This variant was detected in trans with pathogenic variant c.912+1G>A. It was found in extremely low frequency in gnomAD (MAF=0.00006). In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PP4 moderate, PM3, and PP3.",
+                                "dateLastEvaluated": "2020-07-23",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "bfb0df54-1132-4767-9598-0268a4485799",
+                            "localKey": "bfb0df54-1132-4767-9598-0268a4485799",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102912798A>G"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/93378ff3-a0f5-476d-9386-3bbd7a51e0f0"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "This c.563G>T (p.Gly188Val) variant in PAH was reported in trans with pathogenic variant p.Val399= in 1 patient with PAH deficiency (>120 \u03bcmol/L Phe) (PMID: 28982351). Computational evidence for this missense variant is predicted to be damaging (SIFT), probably damaging (PolyPhen2), and disease-causing (MutationTaster). This variant is absent from population databases gnomAD, 1000 Genomes, and ESP. In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PM3, PP3, PP4.",
+                                "dateLastEvaluated": "2020-11-16",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "93378ff3-a0f5-476d-9386-3bbd7a51e0f0",
+                            "localKey": "93378ff3-a0f5-476d-9386-3bbd7a51e0f0",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102855279C>A"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/dd4c9b27-d04f-4738-bae3-de4d0ef5faad"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "This variant c.667_674dup (p.Gln226ThrfsTer?) in PAH was documented in a patient with PAH deficiency (>120 \u03bcmol/L Phe) in the Czech Republic (PMID: 23357515). This is a frameshift variant in exon 6 out of 13 coding exons, predicted to undergo nonsense mediated decay (NMD). The exon is present in biologically-relevant transcripts. This variant is absent in population databases. In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PVS1, PM2, PP4",
+                                "dateLastEvaluated": "2020-11-24",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "dd4c9b27-d04f-4738-bae3-de4d0ef5faad",
+                            "localKey": "dd4c9b27-d04f-4738-bae3-de4d0ef5faad",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102855168_102855175dup"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/b8a375eb-ab64-4ae6-9596-fb9df15defac"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "This variant c.740del (p.Gly247AlafsTer?) in PAH was reported 1 time in a patient with PAH deficiency in the Czech Republic (PMID 23357515). This is a frameshift variant in exon 7 out of 13 coding exons, predicted to undergo nonsense mediated mRNA decay. The exon is present in biologically-relevant transcripts. This variant is absent in population databases. In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PVS1, PM2, PP4",
+                                "dateLastEvaluated": "2020-11-24",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "b8a375eb-ab64-4ae6-9596-fb9df15defac",
+                            "localKey": "b8a375eb-ab64-4ae6-9596-fb9df15defac",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102852918del"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/eb3c68df-9fa2-461a-bce2-76e53507656b"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "This c.499A>T (p.Asn167Tyr) variant in PAH was reported in 1 patient with PAH deficiency referred to as non-PKU HPA (120 - 600uMol/L Phe), it was detected with pathogenic variant p.Arg408Trp (PMID: 23357515). Computational evidence for this variant is conflicting; predicted to be damaging (SIFT), disease-causing (MutationTaster) and benign (PolyPhen2). This variant was found at an extremely low frequency in gnomAD (MAF=0.00005723). Functional studies have been reported with no major impact on enzyme activity as compared to wild type (PMID: 31208052). In summary, this variant meets criteria to be classified as a variant of uncertain significance for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PM3 supporting, PP4.",
+                                "dateLastEvaluated": "2020-12-07",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "eb3c68df-9fa2-461a-bce2-76e53507656b",
+                            "localKey": "eb3c68df-9fa2-461a-bce2-76e53507656b",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102866606T>A"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/a93e52bd-88fe-43c5-b618-e25cef43653f"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "This variant c.1071C>A (p.Cys357Ter) in PAH was reported with pathogenic variants p.Val399=, p.Arg243Gln and c.721C>T in 3 patients with PAH deficiency. BH4 deficiency was excluded through a BH4 loading test, urinary pterin analysis, and DHPR activity assay for 1 patient. (PMID: 28754886, 28982351, 31445982). This is a nonsense variant in exon 11 out of 13 coding exons, predicted to undergo nonsense mediated mRNA decay. The exon is present in biologically-relevant transcripts. This variant is absent in population databases. In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PVS1, PM3 strong, PM2, PP4 moderate.",
+                                "dateLastEvaluated": "2020-12-07",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "a93e52bd-88fe-43c5-b618-e25cef43653f",
+                            "localKey": "a93e52bd-88fe-43c5-b618-e25cef43653f",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102843774G>T"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/854f6ce8-5399-491b-9988-4dcb77d81850"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "This c.707-2A>G variant in PAH was reported in trans with pathogenic variant p.Arg408Trp in 1 Bulgarian patient with PAH deficiency (PMID: 1563085). This variant is absent from population databases gnomAD, 1000 Genomes and ESP. This variant in the -2 splice acceptor site of intron 6 disrupts the reading frame and is predicted to undergo nonsense mediated decay (NMD). The exon is present in biologically-relevant transcripts. In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PVS1, PM2, PM3, PP4.",
+                                "dateLastEvaluated": "2020-12-07",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "854f6ce8-5399-491b-9988-4dcb77d81850",
+                            "localKey": "854f6ce8-5399-491b-9988-4dcb77d81850",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102852952T>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/fedc6e34-dce3-4144-87eb-a4c1c6379ffb"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "This c.442-1G>C variant in PAH was reported in trans with pathogenic variant p.Val388Met in 1 Han Chinese patient with PAH deficiency (PMID: 28982351). This variant is absent from population databases gnomAD, 1000 Genomes and ESP. This variant in the -1 splice acceptor site of intron 4 disrupts the reading frame and is predicted to undergo nonsense mediated decay (NMD). The exon is present in biologically-relevant transcripts. In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PVS1, PM2, PM3, PP4.",
+                                "dateLastEvaluated": "2020-12-07",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "fedc6e34-dce3-4144-87eb-a4c1c6379ffb",
+                            "localKey": "fedc6e34-dce3-4144-87eb-a4c1c6379ffb",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102866664C>G"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/bd85901e-db8a-41a6-9f31-0446df09589d"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "This c.843-1G>A variant in PAH was reported in trans with pathogenic variants p.S70del and p.Arg243Gln in 2 Han Chinese patients with PAH deficiency (PMID: 28982351). This variant is present in European (non-Finnish) populations at an extremely low frequency in gnomAD (MAF=0.000008827). This variant in the -1 splice acceptor site of intron 7 disrupts the reading frame and is predicted to undergo nonsense mediated decay (NMD). The exon is present in biologically-relevant transcripts. In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PVS1, PM3 strong, PM2, PP4",
+                                "dateLastEvaluated": "2020-12-07",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "bd85901e-db8a-41a6-9f31-0446df09589d",
+                            "localKey": "bd85901e-db8a-41a6-9f31-0446df09589d",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102851757C>T"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/f5286ec2-51ad-4be7-9a8c-bdc402eceba6"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "The c.843-6T>C PAH variant has been reported in 1 Northwest Chinese patient with PAH deficiency (Phe \u2265 1200 \u03bcmol/L) (PMID: 30747360). A defect in BH4 metabolism was excluded through a BH4 loading test, urinary pterin analysis, and DHPR activity assay. This variant is absent from population databases gnomAD, 1000 Genomes and ESP. Splicing prediction algorithms are conflicting. In summary, this variant meets criteria to be classified as uncertain significance for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PP4_moderate.",
+                                "dateLastEvaluated": "2020-12-09",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "f5286ec2-51ad-4be7-9a8c-bdc402eceba6",
+                            "localKey": "f5286ec2-51ad-4be7-9a8c-bdc402eceba6",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102851762A>G"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/4ad11597-d41e-45b6-917a-849787630c2a"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.1066-14C>G PAH variant has been reported in 1 Chinese patient with PAH deficiency (Phe =512\u03bcmol/L) detected with the pathogenic PAH variant c.1222C>T (PMID: 29499199). A defect in BH4 metabolism was excluded through a BH4 loading test, urinary pterin analysis, and DHPR activity assay. This variant is absent from population databases gnomAD, 1000 Genomes and ESP. Splicing prediction algorithms predict this variant to be probably damaging. In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PP4_moderate, PP3, PM3_supporting.",
+                                "dateLastEvaluated": "2020-12-11",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "4ad11597-d41e-45b6-917a-849787630c2a",
+                            "localKey": "4ad11597-d41e-45b6-917a-849787630c2a",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102843793G>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/30d2b670-3555-4ff4-8b51-001ee0d9d0d3"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "The c.969+4A>T PAH variant has been reported in 1 Northwest Chinese patient with PAH deficiency (Phe \u2265 1200 \u03bcmol/L) (PMID: 30747360). A defect in BH4 metabolism was excluded through a BH4 loading test, urinary pterin analysis, and DHPR activity assay. This variant is absent from population databases gnomAD, 1000 Genomes and ESP. Splicing prediction algorithms predict this variant to be probably damaging. In summary, this variant meets criteria to be classified as a variant of uncertain significance for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PP4_moderate, PP3.",
+                                "dateLastEvaluated": "2020-12-11",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "30d2b670-3555-4ff4-8b51-001ee0d9d0d3",
+                            "localKey": "30d2b670-3555-4ff4-8b51-001ee0d9d0d3",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102846891T>A"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/43c0e463-29fc-4579-ad14-55bf5d1fab63"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "This c.320A>G (p.His107Arg) variant in PAH was reported in 22 patients with PAH deficiency (>120 uMol/L Phe), detected in trans in 16 patients with pathogenic variants p.Arg111*, p.Arg400Thr, p.Val399=, p.Val399=, p.Arg241Cys, p.Arg241Cys, p.Arg413Pro, p.Gly257Val, p.His107Arg, p.Arg243Gln, p.His220Pro, p.Arg176*, p.Arg243Gln, p.Arg243Gln, p.Val230Ile, p.Ile65Thr (PMID: 28982351). Computational evidence for this variant is conflicting; predicted to be tolerated (SIFT), disease-causing (MutationTaster) and benign (PolyPhen2). This variant is present in European (Non-Finnish) populations at extremely low frequencies in gnomAD (MAF=0.00002), ExAC (MAF=0.00001), and 1000 Genomes (MAF=0.00099). In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PM3_very-strong, PP4.",
+                                "dateLastEvaluated": "2020-12-09",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "43c0e463-29fc-4579-ad14-55bf5d1fab63",
+                            "localKey": "43c0e463-29fc-4579-ad14-55bf5d1fab63",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102894767T>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/0c78dc36-0ebe-4bea-9d50-6ff0856bbb8f"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "This c.679C>G (p.Leu227Val) variant in PAH was reported in trans with pathogenic variant p.Arg243Gln in 1 patient with PAH deficiency (1134\u03bcmol/L Phe) (PMID: 28982351). Computational evidence for this missense variant is predicted to be damaging (SIFT), probably damaging (PolyPhen2), and disease causing (MutationTaster). This variant is absent from population databases gnomAD, 1000 Genomes, and ESP. In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PP3, PM3, PP4.",
+                                "dateLastEvaluated": "2020-12-09",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "0c78dc36-0ebe-4bea-9d50-6ff0856bbb8f",
+                            "localKey": "0c78dc36-0ebe-4bea-9d50-6ff0856bbb8f",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102855163G>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/33ecfb68-253a-4ef9-a345-1da8c398b15d"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "This c.684A>C (p.Glu228Asp) variant in PAH was reported in trans with pathogenic variant p.Arg243Gln in 1 patient with PAH deficiency (960\u03bcmol/L Phe) (PMID: 28982351). This variant was found at an amino acid residue where p.Glu228Lys, a likely pathogenic missense variant, has been seen before. Computational evidence for this missense variant is conflicting; predicted to be tolerated (SIFT), disease-causing (MutationTaster) and benign (PolyPhen2). This variant is absent from population databases gnomAD, 1000 Genomes, and ESP. In summary, this variant meets criteria to be classified as a variant of uncertain significance for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PM3, PP4.",
+                                "dateLastEvaluated": "2020-12-21",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "33ecfb68-253a-4ef9-a345-1da8c398b15d",
+                            "localKey": "33ecfb68-253a-4ef9-a345-1da8c398b15d",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102855158T>G"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/9a6918e9-715e-4432-9857-2279bf43050a"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "The c.1089G>T (p.Lys363Asn) variant in PAH has been reported in 3 patients with mild HPA and mild PKU. A defect in the synthesis or regeneration pathways of 6R-BH4 was ruled out. It was detected in trans with pathogenic variants Phe55Leufs*6 (PMID: 27121329) and c.442-1G>A (PMID: 29316886). This variant is absent in population databases. However, multiple lines of computation evidence suggest no impact on the PAH protein. In summary, computational evidence conflicts with case level evidence and is therefore classified as uncertain significance for PAH. PAH-specific ACMG/AMP criteria applied: PM3_strong, PP4_Moderate, PM2, BP4.",
+                                "dateLastEvaluated": "2021-02-26",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "9a6918e9-715e-4432-9857-2279bf43050a",
+                            "localKey": "9a6918e9-715e-4432-9857-2279bf43050a",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102843756C>A"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:27121329"
+                                    },
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/deb05865-1cb0-4972-95ae-59e2da8df3a4"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.847A>G (p.Ile283Val) variant in PAH is absent from all population databases, and is at the same amino acid as a previously established pathogenic variant (c.847A>T (p.Ile283Phe)). It has been identified in a patient with classic PKU (BH4 defect excluded), and in trans with a known pathogenic variant (c.1045T>C, p.Ser349Pro) PMID: 27121329. Summary evidence using PAH specific ACMG/AMP guidelines :PM2, PM5, PM3, PP4_Moderate.",
+                                "dateLastEvaluated": "2018-12-10",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "deb05865-1cb0-4972-95ae-59e2da8df3a4",
+                            "localKey": "deb05865-1cb0-4972-95ae-59e2da8df3a4",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102851752T>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:15300621"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:23932990"
+                                    },
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/81e99b34-e26c-4f1b-af94-b863ba7c1e11"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.827T>G (p.Met276Arg) variant in PAH is absent from population databases and predicted damaging by in silico models. It is a novel missense change at an amino acid residue where different pathogenic missense changes have been reported (p.Met276Val is LP in ClinVar, p.Met276Lys is LP via PAH EP). It has been reported in individuals with phenylkeonuria in the literature, although a defect in the metabolism of BH4 has not been excluded as a cause for elevated phenylalanine in any of these patients (PMID: 23932990, 15300621). In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PP4, PM2, PM5, PP3.",
+                                "dateLastEvaluated": "2018-12-10",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "81e99b34-e26c-4f1b-af94-b863ba7c1e11",
+                            "localKey": "81e99b34-e26c-4f1b-af94-b863ba7c1e11",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102852830A>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:22112818"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:8535445"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:1998345"
+                                    },
+                                    {
+                                        "db": "PubMed",
+                                        "id": "PMID:26503515"
+                                    },
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/19dc340b-f7df-4865-bba3-db4b17bddcab"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The c.441+1G>A variant in PAH is a canonical splice variant in +1 splice site (exon 3/4 junction) in the canonical transcript of PAH, a gene fulfilling the most recent criteria for LOF being a known disease mechanism (PVS1; see PVS1: Recommendations for Interpreting the Loss of Function PVS1 ACMG/AMP Variant Criteria). In addition, the variant has been previously shown by RT-PCR analysis to alter RNA splicing (PS3_Supporting; PMID: 8535445). It is ultra-rare (highest observed population frequency 0.00001, with zero homozygotes, in gnomAD Non-Finnish European subpopulation), well under the PAH-specific frequency cutoff of 0.0002 (PM2). It has been found in multiple probands with classic PKU (e.g., PMID: 7726156, 8535445, 16256386, 17096675, 20187763, 22112818, 24350308, 23430918, 23764561, 8535445), although BH4 deficiency does not appear to have been formally excluded (PP4), including in trans with the Clinvar-Pathogenic R408W allele (PMID: 22112818) (PM3).",
+                                "dateLastEvaluated": "2018-12-22",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "19dc340b-f7df-4865-bba3-db4b17bddcab",
+                            "localKey": "19dc340b-f7df-4865-bba3-db4b17bddcab",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102877461C>T"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/e4cbab06-2651-41ac-ae9f-526351a9e939"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.1247C>A (p.Pro416Gln) variant in PAH has been reported in 2 patients with mild PKU (PP4; PMID: 27413125, 31623983). This variant has been detected with pathogenic variants: p.I306V (PMID: 23430547) and c.664_665del (PMID: 17502162) (PM3). This variant has an extremely low frequency in gnomAD (MAF=0.000008792, PM2), and is predicted deleterious by SIFT, PolyPhen2, MutationTaster, and REVEL = 0.986 (PP3). This variant was shown to retain enzyme activity, but unfolds at a faster rate than WT (PMID: 18937047). In summary, this variant meets criteria to be classified as likely pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PM3, PP3, PP4.",
+                                "dateLastEvaluated": "2021-03-12",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "e4cbab06-2651-41ac-ae9f-526351a9e939",
+                            "localKey": "e4cbab06-2651-41ac-ae9f-526351a9e939",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102840468G>T"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/1bf52a23-a03e-4000-871d-889b26af8ff3"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The c.443_509+1del (p.Ex5del) variant in PAH is a deletion of exon 5 and is predicted to lead to a frameshift at His170, premature protein truncation, and NMD (PVS1). It is absent from ethnically diverse control databases, including gnomAD (structural variant version, gnomAD SVs v2.1) (PM2). It has been previously reported in one patient with PKU (BH4 deficiency excluded by sequencing of the genes in the BH4 cofactor metabolism pathway) (PP4_Moderate) (PMID: 23942198) in presumed trans with the p.G332R variant (unclassified/VUS). It is also noted in ClinVar (ID 102681) without a classification. Classification: Pathogenic Supporting Criteria: PVS1; PM2; PP4_Moderate",
+                                "dateLastEvaluated": "2020-05-22",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "1bf52a23-a03e-4000-871d-889b26af8ff3",
+                            "localKey": "1bf52a23-a03e-4000-871d-889b26af8ff3",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102866596_102866663del"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/6fa09283-e4f3-458b-aec9-b227b83fd0f3"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The p.Ex5del1670 (c.442-1377_509+226del1671) is a 1670bp deletion in Exon 5 of PAH, and is predicted to lead to a frameshift at His170, premature protein truncation, and NMD (PVS1). It is absent from ethnically diverse control databases, including gnomAD (structural variant version, gnomAD SVs v2.1) (PM2). It has been previously reported in one patient with PKU (BH4 deficiency excluded by sequencing of the genes in the BH4 cofactor metabolism pathway) (PP4_Moderate) (PMID: 23942198) in presumed trans with the p.A313V variant (Pathogenic per PAH VCEP) (0.5 points; PM3_Supporting). Classification: Pathogenic Supporting Criteria: PVS1; PM2; PM3_Supporting; PP4_Moderate",
+                                "dateLastEvaluated": "2020-06-04",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "6fa09283-e4f3-458b-aec9-b227b83fd0f3",
+                            "localKey": "6fa09283-e4f3-458b-aec9-b227b83fd0f3",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102866372_102868042del"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/fe18266f-4396-4995-aee4-caccb06c4bae"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The p.Ex5del5321 variant is a 5321bp deletion in Exon 5 of PAH, a gene where loss of function is a known disease mechanism, and is predicted to lead to a frameshift at His170, premature protein truncation, and NMD (PVS1). One heterozygote for the deletion is present in gnomAD, corresponding to an allele frequency of 0.000046 (structural variant version, gnomAD SVs v2.1), less than the 0.0002 cutoff for use of PM2 (PM2). It has been previously reported in one patient with PKU (BH4 deficiency excluded by sequencing of the genes in the BH4 cofactor metabolism pathway) (PP4_Moderate) (PMID: 23942198) in presumed trans with the p.G332R variant (unclassified/VUS). Classification: Pathogenic Supporting Criteria: PVS1; PM2; PP4_Moderate",
+                                "dateLastEvaluated": "2020-06-05",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "fe18266f-4396-4995-aee4-caccb06c4bae",
+                            "localKey": "fe18266f-4396-4995-aee4-caccb06c4bae",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102865713_102871066del"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/9c21c34e-abd4-41c0-bf30-c1cedc8e886e"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The p.Ex6_7_8del (c.510-735_912+434del) variant is a 4799bp deletion in PAH, a gene where loss of function is a known disease mechanism, and is predicted to lead to a frameshift at Gly171, premature protein truncation, and NMD (PVS1). It is absent from ethnically diverse control databases, including gnomAD (structural variant version, gnomAD SVs v2.1) (PM2). It has been previously reported in one patient with PKU (BH4 deficiency excluded by sequencing of the genes in the BH4 cofactor metabolism pathway) (PP4_Moderate) (PMID: 23942198) in presumed trans with the p.F55L variant (Pathogenic per PAH VCEP) (0.5 points; PM3_Supporting). Classification: Pathogenic Supporting Criteria: PVS1; PM2; PP4_Moderate; PM3_Supporting",
+                                "dateLastEvaluated": "2020-06-05",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "9c21c34e-abd4-41c0-bf30-c1cedc8e886e",
+                            "localKey": "9c21c34e-abd4-41c0-bf30-c1cedc8e886e",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102851253_102856067del"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/f2624763-823a-4fd6-8c79-8ac6793bf2f5"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The frameshift variant NM_000277.3(PAH):c.919del (p.Gly307AlafsTer34) occurs in exon 9 of 13 and is predicted to result in NMD. The variant is absent from population databases, including gnomAD. One patient has been reported (PMID: 23430918) with this variant. In summary, this variant meets criteria to be classified as Pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PVS1, PM2, PP4.",
+                                "dateLastEvaluated": "2020-12-08",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "f2624763-823a-4fd6-8c79-8ac6793bf2f5",
+                            "localKey": "f2624763-823a-4fd6-8c79-8ac6793bf2f5",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102846944del"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/40d1617a-1556-4d96-80b5-f6a005e3f3e0"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The frameshift variant NM_000277.3(PAH):c.753del (p.Arg252GlyfsTer89) occurs in exon 7 of 13 and is predicted to result in NMD. The variant is absent from population databases, including gnomAD. One patient has been reported (PMID: 21307867) with this variant. In summary, this variant meets criteria to be classified as Pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PVS1, PM2, PP4.",
+                                "dateLastEvaluated": "2020-12-08",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "40d1617a-1556-4d96-80b5-f6a005e3f3e0",
+                            "localKey": "40d1617a-1556-4d96-80b5-f6a005e3f3e0",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102852904del"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/8de0de63-abcc-463d-ad96-ba40efd5b321"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The PAH variant c.1065+1G>A (IVS10+1G>A) affects the canonical splice site (donor site). Loss of function in the PAH gene is a known mechanism of disease. Exon skipping is predicted to not disrupt the reading frame. This variant is predicted to alter a region that is critical to protein function. The PAH variant c.1065+1G>A (IVS10+1G>A) was identified in two French patients with mild hyperphenylalaninemia (mHP, 180 < Phe < 600 \u03bcmol/L) with the likely pathogenic variant c.261C>A (p.Ser87Arg) and with the pathogenic variant c.1169A>G (p.Glu390Gly)(PMID: 26666653). The PAH variant c.1065+1G>A was also reported in an European patient with PAH deficiency (PMID: 10679941). According to gnomAD, the PAH variant c.1065+1G>A (IVS10+1G>A) is present at a low allele frequency in population databases, with the highest reported frequency in the European (Finnish) population (0.00005). In summary, this variant meets the criteria to be classified as likely pathogenic. PAH-specific ACMG/AMP criteria applied: PM2, PM3_Supporting, PP4, and PVS1_Strong.",
+                                "dateLastEvaluated": "2021-03-21",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "8de0de63-abcc-463d-ad96-ba40efd5b321",
+                            "localKey": "8de0de63-abcc-463d-ad96-ba40efd5b321",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102844335C>T"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/533dfef9-f4fd-434d-8d70-23d08956adf3"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The c.611A>G (p.Tyr204Cys) variant in PAH has been reported in multiple individuals with Classic PKU and MHP (BH4 deficiency excluded). (PMID: 15503242). This variant has a MAF (0.00016) in gnomAD. This variant creates a fully active, novel 5 \u0301 donor splice site which results in an aberrantly spliced mRNA with a 96-nt deletion at the 3 \u0301-end of exon 6 PMID: 8990021 (aka Ex6-96A>G). Multiple lines of computational evidence support a deleterious effect. This variant was detected in trans with multiple pathogenic variants including: p.R111* (2); c.442-1G>A; p.R158W; p.L255S; p.P281L; p.K363Nfs*37; p.V399V; p.R408W; p.R241C (2); p.R243Q; p.R261Q (2); p.S349A; p.R413P; p.A434D (2) (PMID: 26322415). In summary, this variant meets criteria to be classified as pathogenic for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PP4_Moderate, PM3_very-strong, PP3.",
+                                "dateLastEvaluated": "2021-03-26",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "533dfef9-f4fd-434d-8d70-23d08956adf3",
+                            "localKey": "533dfef9-f4fd-434d-8d70-23d08956adf3",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102855231T>C"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/17a486f7-ffbd-4259-8b78-60b54b661011"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "The c.506G>C (p.Arg169Pro) variant in PAH is reported as Likely Pathogenic by one clinical laboratory in ClinVar (see variant ID 446524); no further information is provided. At the time of review, the variant does not appear to be reported in the published literature and/or in the BioPKU database. The variant is predicted damaging by multiple lines of computational evidence (PP3). It is absent in gnomAD (PM2). Other missense variants at this site are pathogenic/likely pathogenic \u2013 p.Arg169Ser (variant ID 932262), p.Arg169His (variant ID 102706), p.Arg169Gly (variant ID 551103), and p.Arg169Cys (variant ID 125436) (PM5). In summary, this variant meets criteria to be classified as uncertain significance for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PM5, PP3.",
+                                "dateLastEvaluated": "2021-03-26",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "17a486f7-ffbd-4259-8b78-60b54b661011",
+                            "localKey": "17a486f7-ffbd-4259-8b78-60b54b661011",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102866599C>G"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/9f1f84a2-314e-4b28-9b13-a38f3a946493"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "The c.869A>T (p.His290Leu) variant in PAH has been reported in a proband with classic PKU (PMID: 26666653); BH4 deficiency does not appear to have been formally excluded (PP4). It was found with the pathogenic variant c.838G>A (p.Glu280Lys) (PM3_Supporting). The amino acid substitution is predicted damaging by multiple lines of computational evidence (PP3). It is absent from ethnically diverse control databases (PM2). Other missense variants at the site, including p.His290Arg, p.His290Tyr, and p.His290Gln are classified as Likely Pathogenic and Uncertain Significance. Thus, PM5 is not met. In summary, this variant meets criteria to be classified as uncertain significance for PAH. PAH-specific ACMG/AMP criteria applied: PM2, PM3-supporting, PP3, PP4.",
+                                "dateLastEvaluated": "2021-03-26",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "9f1f84a2-314e-4b28-9b13-a38f3a946493",
+                            "localKey": "9f1f84a2-314e-4b28-9b13-a38f3a946493",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102851730T>A"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "assertionCriteria": {
+                                "method": "ClinGen PAH ACMG Specifications v1",
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/i2ra5ppm/clingen_pah_acmg_specifications_v1.pdf"
+                                }
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/53198f23-8d86-4dfe-be5d-9849e4d7bfc2"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Uncertain significance",
+                                "comment": "The c.869A>G (p.His290Arg) variant in PAH has been reported in a Chinese patient PKU (PMID: 15300621) This variant is absent from population databases. A deleterious effect is predicted by multiple lines of computational evidence. In summary, this variant meets criteria to be classified as uncertain significance for PAH. PAH-specific ACMG/AMP criteria applied: PP4, PM2, PP3.",
+                                "dateLastEvaluated": "2021-03-21",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0009861"
+                                    }
+                                ]
+                            },
+                            "localID": "53198f23-8d86-4dfe-be5d-9849e4d7bfc2",
+                            "localKey": "53198f23-8d86-4dfe-be5d-9849e4d7bfc2",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "PAH"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000012.12:g.102851730T>C"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "submissionName": "ClinGen_PAH_20210428_API_TEST"
+                }
+            }
+        }
+    ]
+}
+Saved response to: responses/ClinGen_PAH_20210428_API_TEST.json
+Successful submission
+Response code 201
+< Date: Wed, 28 Apr 2021 18:19:40 GMT
+< Server: Apache
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Content-Type: application/json; charset=UTF-8
+< content-encoding: gzip
+< content-length: 45
+< Set-Cookie: ncbi_sid=D94C102EEB913F29%5F4D45SID; Max-Age=31536000; Domain=.nih.gov; Path=/; $x-enc=URI_ENCODING
+< X-UA-Compatible: IE=Edge
+< X-XSS-Protection: 1; mode=block
+< Keep-Alive: timeout=5, max=100
+< Connection: Keep-Alive
+{"id":"SUB9551029"}
+GET https://submit.ncbi.nlm.nih.gov/api/v1/submissions/SUB9551029/actions
+Traceback (most recent call last):
+  File "clinvar_api/main.py", line 198, in <module>
+    sys.exit(main(argv))
+  File "clinvar_api/main.py", line 179, in main
+    status_check = do_status_check(sub_id, api_key)
+  File "/Users/kferrite/dev/clinvar-api/clinvar_api/clinvar_api/submission.py", line 57, in do_status_check
+    summary_files = status_response["actions"][0]["responses"][0]["files"]
+IndexError: list index out of range

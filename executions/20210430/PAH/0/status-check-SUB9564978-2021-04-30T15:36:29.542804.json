@@ -1,0 +1,22 @@
+{
+  "actions": [
+    {
+      "id": "SUB9564978-1",
+      "targetDb": "clinvar",
+      "status": "processing",
+      "updated": "2021-04-30T19:36:08.158562Z",
+      "responses": [
+        {
+          "status": "processing",
+          "message": {
+            "severity": "info",
+            "errorCode": null,
+            "text": "Your ClinVar submission processing status is \"In processing\"."
+          },
+          "files": [],
+          "objects": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1198 @@
+{
+  "actions": [
+    {
+      "id": "SUB9551122-1",
+      "targetDb": "clinvar",
+      "status": "error",
+      "updated": "2021-04-28T18:40:04.976597Z",
+      "responses": [
+        {
+          "status": "error",
+          "message": {
+            "severity": "error",
+            "errorCode": "2",
+            "text": "Your ClinVar submission processing status is \"Error\". Please find the details in the file referenced by actions[0].responses[0].files[0].url."
+          },
+          "files": [
+            {
+              "url": "https://submit.ncbi.nlm.nih.gov/api/2.0/files/8bvfy1ag/sub9551122-summary-report.json/?format=attachment",
+              "value": {
+                "submissionName": "ClinGen_PAH_20210428_API_TEST3",
+                "submissionDate": "2021-04-28",
+                "batchProcessingStatus": "Error",
+                "batchReleaseStatus": "Not released",
+                "totalCount": 40,
+                "totalErrors": 40,
+                "totalSuccess": 0,
+                "totalPublic": 0,
+                "submissions": [
+                  {
+                    "identifiers": {
+                      "localID": "6b585b6d-6670-47ac-ac87-8f2ff3ab55fd",
+                      "localKey": "6b585b6d-6670-47ac-ac87-8f2ff3ab55fd",
+                      "clinvarLocalKey": "6b585b6d-6670-47ac-ac87-8f2ff3ab55fd"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "fb82abb9-c0f3-4901-acad-0e2a6de4b34d",
+                      "localKey": "fb82abb9-c0f3-4901-acad-0e2a6de4b34d",
+                      "clinvarLocalKey": "fb82abb9-c0f3-4901-acad-0e2a6de4b34d"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "5a4488b7-d663-48dd-bf7b-106a42346d82",
+                      "localKey": "5a4488b7-d663-48dd-bf7b-106a42346d82",
+                      "clinvarLocalKey": "5a4488b7-d663-48dd-bf7b-106a42346d82"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "0b5b1397-d24f-4369-b608-dd9d8cdb4d08",
+                      "localKey": "0b5b1397-d24f-4369-b608-dd9d8cdb4d08",
+                      "clinvarLocalKey": "0b5b1397-d24f-4369-b608-dd9d8cdb4d08"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "00b68297-2f63-4952-bc0d-108c6dfecefb",
+                      "localKey": "00b68297-2f63-4952-bc0d-108c6dfecefb",
+                      "clinvarLocalKey": "00b68297-2f63-4952-bc0d-108c6dfecefb"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "c54336ad-7a33-4a07-895c-275c08ab017c",
+                      "localKey": "c54336ad-7a33-4a07-895c-275c08ab017c",
+                      "clinvarLocalKey": "c54336ad-7a33-4a07-895c-275c08ab017c"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "340b253a-4f3c-45ed-aef4-8e02574c8109",
+                      "localKey": "340b253a-4f3c-45ed-aef4-8e02574c8109",
+                      "clinvarLocalKey": "340b253a-4f3c-45ed-aef4-8e02574c8109"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "5c41ff75-cc92-448f-8fbd-6718561a4dac",
+                      "localKey": "5c41ff75-cc92-448f-8fbd-6718561a4dac",
+                      "clinvarLocalKey": "5c41ff75-cc92-448f-8fbd-6718561a4dac"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "5391784e-1cfd-43f5-8aba-6f02c44d57b2",
+                      "localKey": "5391784e-1cfd-43f5-8aba-6f02c44d57b2",
+                      "clinvarLocalKey": "5391784e-1cfd-43f5-8aba-6f02c44d57b2"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "bfb0df54-1132-4767-9598-0268a4485799",
+                      "localKey": "bfb0df54-1132-4767-9598-0268a4485799",
+                      "clinvarLocalKey": "bfb0df54-1132-4767-9598-0268a4485799"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "93378ff3-a0f5-476d-9386-3bbd7a51e0f0",
+                      "localKey": "93378ff3-a0f5-476d-9386-3bbd7a51e0f0",
+                      "clinvarLocalKey": "93378ff3-a0f5-476d-9386-3bbd7a51e0f0"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "dd4c9b27-d04f-4738-bae3-de4d0ef5faad",
+                      "localKey": "dd4c9b27-d04f-4738-bae3-de4d0ef5faad",
+                      "clinvarLocalKey": "dd4c9b27-d04f-4738-bae3-de4d0ef5faad"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "b8a375eb-ab64-4ae6-9596-fb9df15defac",
+                      "localKey": "b8a375eb-ab64-4ae6-9596-fb9df15defac",
+                      "clinvarLocalKey": "b8a375eb-ab64-4ae6-9596-fb9df15defac"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "eb3c68df-9fa2-461a-bce2-76e53507656b",
+                      "localKey": "eb3c68df-9fa2-461a-bce2-76e53507656b",
+                      "clinvarLocalKey": "eb3c68df-9fa2-461a-bce2-76e53507656b"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "a93e52bd-88fe-43c5-b618-e25cef43653f",
+                      "localKey": "a93e52bd-88fe-43c5-b618-e25cef43653f",
+                      "clinvarLocalKey": "a93e52bd-88fe-43c5-b618-e25cef43653f"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "854f6ce8-5399-491b-9988-4dcb77d81850",
+                      "localKey": "854f6ce8-5399-491b-9988-4dcb77d81850",
+                      "clinvarLocalKey": "854f6ce8-5399-491b-9988-4dcb77d81850"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "fedc6e34-dce3-4144-87eb-a4c1c6379ffb",
+                      "localKey": "fedc6e34-dce3-4144-87eb-a4c1c6379ffb",
+                      "clinvarLocalKey": "fedc6e34-dce3-4144-87eb-a4c1c6379ffb"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "bd85901e-db8a-41a6-9f31-0446df09589d",
+                      "localKey": "bd85901e-db8a-41a6-9f31-0446df09589d",
+                      "clinvarLocalKey": "bd85901e-db8a-41a6-9f31-0446df09589d"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "f5286ec2-51ad-4be7-9a8c-bdc402eceba6",
+                      "localKey": "f5286ec2-51ad-4be7-9a8c-bdc402eceba6",
+                      "clinvarLocalKey": "f5286ec2-51ad-4be7-9a8c-bdc402eceba6"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "4ad11597-d41e-45b6-917a-849787630c2a",
+                      "localKey": "4ad11597-d41e-45b6-917a-849787630c2a",
+                      "clinvarLocalKey": "4ad11597-d41e-45b6-917a-849787630c2a"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "30d2b670-3555-4ff4-8b51-001ee0d9d0d3",
+                      "localKey": "30d2b670-3555-4ff4-8b51-001ee0d9d0d3",
+                      "clinvarLocalKey": "30d2b670-3555-4ff4-8b51-001ee0d9d0d3"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "43c0e463-29fc-4579-ad14-55bf5d1fab63",
+                      "localKey": "43c0e463-29fc-4579-ad14-55bf5d1fab63",
+                      "clinvarLocalKey": "43c0e463-29fc-4579-ad14-55bf5d1fab63"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "0c78dc36-0ebe-4bea-9d50-6ff0856bbb8f",
+                      "localKey": "0c78dc36-0ebe-4bea-9d50-6ff0856bbb8f",
+                      "clinvarLocalKey": "0c78dc36-0ebe-4bea-9d50-6ff0856bbb8f"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "33ecfb68-253a-4ef9-a345-1da8c398b15d",
+                      "localKey": "33ecfb68-253a-4ef9-a345-1da8c398b15d",
+                      "clinvarLocalKey": "33ecfb68-253a-4ef9-a345-1da8c398b15d"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "9a6918e9-715e-4432-9857-2279bf43050a",
+                      "localKey": "9a6918e9-715e-4432-9857-2279bf43050a",
+                      "clinvarLocalKey": "9a6918e9-715e-4432-9857-2279bf43050a"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "deb05865-1cb0-4972-95ae-59e2da8df3a4",
+                      "localKey": "deb05865-1cb0-4972-95ae-59e2da8df3a4",
+                      "clinvarLocalKey": "deb05865-1cb0-4972-95ae-59e2da8df3a4"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "81e99b34-e26c-4f1b-af94-b863ba7c1e11",
+                      "localKey": "81e99b34-e26c-4f1b-af94-b863ba7c1e11",
+                      "clinvarLocalKey": "81e99b34-e26c-4f1b-af94-b863ba7c1e11"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "19dc340b-f7df-4865-bba3-db4b17bddcab",
+                      "localKey": "19dc340b-f7df-4865-bba3-db4b17bddcab",
+                      "clinvarLocalKey": "19dc340b-f7df-4865-bba3-db4b17bddcab"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "e4cbab06-2651-41ac-ae9f-526351a9e939",
+                      "localKey": "e4cbab06-2651-41ac-ae9f-526351a9e939",
+                      "clinvarLocalKey": "e4cbab06-2651-41ac-ae9f-526351a9e939"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "1bf52a23-a03e-4000-871d-889b26af8ff3",
+                      "localKey": "1bf52a23-a03e-4000-871d-889b26af8ff3",
+                      "clinvarLocalKey": "1bf52a23-a03e-4000-871d-889b26af8ff3"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "6fa09283-e4f3-458b-aec9-b227b83fd0f3",
+                      "localKey": "6fa09283-e4f3-458b-aec9-b227b83fd0f3",
+                      "clinvarLocalKey": "6fa09283-e4f3-458b-aec9-b227b83fd0f3"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "fe18266f-4396-4995-aee4-caccb06c4bae",
+                      "localKey": "fe18266f-4396-4995-aee4-caccb06c4bae",
+                      "clinvarLocalKey": "fe18266f-4396-4995-aee4-caccb06c4bae"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "9c21c34e-abd4-41c0-bf30-c1cedc8e886e",
+                      "localKey": "9c21c34e-abd4-41c0-bf30-c1cedc8e886e",
+                      "clinvarLocalKey": "9c21c34e-abd4-41c0-bf30-c1cedc8e886e"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "f2624763-823a-4fd6-8c79-8ac6793bf2f5",
+                      "localKey": "f2624763-823a-4fd6-8c79-8ac6793bf2f5",
+                      "clinvarLocalKey": "f2624763-823a-4fd6-8c79-8ac6793bf2f5"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "40d1617a-1556-4d96-80b5-f6a005e3f3e0",
+                      "localKey": "40d1617a-1556-4d96-80b5-f6a005e3f3e0",
+                      "clinvarLocalKey": "40d1617a-1556-4d96-80b5-f6a005e3f3e0"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "8de0de63-abcc-463d-ad96-ba40efd5b321",
+                      "localKey": "8de0de63-abcc-463d-ad96-ba40efd5b321",
+                      "clinvarLocalKey": "8de0de63-abcc-463d-ad96-ba40efd5b321"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "533dfef9-f4fd-434d-8d70-23d08956adf3",
+                      "localKey": "533dfef9-f4fd-434d-8d70-23d08956adf3",
+                      "clinvarLocalKey": "533dfef9-f4fd-434d-8d70-23d08956adf3"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "17a486f7-ffbd-4259-8b78-60b54b661011",
+                      "localKey": "17a486f7-ffbd-4259-8b78-60b54b661011",
+                      "clinvarLocalKey": "17a486f7-ffbd-4259-8b78-60b54b661011"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "9f1f84a2-314e-4b28-9b13-a38f3a946493",
+                      "localKey": "9f1f84a2-314e-4b28-9b13-a38f3a946493",
+                      "clinvarLocalKey": "9f1f84a2-314e-4b28-9b13-a38f3a946493"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "identifiers": {
+                      "localID": "53198f23-8d86-4dfe-be5d-9849e4d7bfc2",
+                      "localKey": "53198f23-8d86-4dfe-be5d-9849e4d7bfc2",
+                      "clinvarLocalKey": "53198f23-8d86-4dfe-be5d-9849e4d7bfc2"
+                    },
+                    "processingStatus": "Error",
+                    "errors": [
+                      {
+                        "input": [
+                          {
+                            "field": "ConditionID.type",
+                            "value": "MONDO"
+                          },
+                          {
+                            "field": "ConditionID.value",
+                            "value": "MONDO:0009861"
+                          }
+                        ],
+                        "output": {
+                          "errors": [
+                            {
+                              "userMessage": "The identifier you provided (MONDO:MONDO:0009861) cannot be validated, either because it is invalid or because it is valid but not in our database yet. For the latter case, contact us at clinvar@ncbi.nlm.nih.gov."
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "objects": []
+        }
+      ]
+    }
+  ]
+}
