@@ -187,7 +187,8 @@ def main(argv):
                 sub_id = submission_response["id"]
                 status_check = do_status_check(sub_id, api_key)
                 print(status_check)
-                status_filename = "status-check-%s-%s.json" % (doc["submissionName"], sub_id)
+                status_filename = "status-check-%s-%s-%s.json" % (
+                    doc["submissionName"], sub_id, datetime.datetime.now().isoformat())
                 with open(status_filename, "w") as f:
                     json.dump(status_check, f, indent=2)
                 print("Saved status check to: " + status_filename)
