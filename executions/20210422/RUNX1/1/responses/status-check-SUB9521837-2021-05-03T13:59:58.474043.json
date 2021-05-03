@@ -1,0 +1,47 @@
+{
+  "actions": [
+    {
+      "id": "SUB9521837-1",
+      "targetDb": "clinvar",
+      "status": "processed",
+      "updated": "2021-05-03T14:33:06.049497Z",
+      "responses": [
+        {
+          "status": "processed",
+          "message": {
+            "severity": "info",
+            "errorCode": "0",
+            "text": "Your ClinVar submission processing status is \"Success\". Please find the details in the file referenced by actions[0].responses[0].files[0].url."
+          },
+          "files": [
+            {
+              "url": "https://submit.ncbi.nlm.nih.gov/api/2.0/files/bcg6jvuw/sub9521837-summary-report.json/?format=attachment",
+              "value": {
+                "submissionName": "MyeloMalig_20210210_API",
+                "submissionDate": "2021-04-22",
+                "batchProcessingStatus": "Success",
+                "batchReleaseStatus": "Not released",
+                "totalCount": 1,
+                "totalErrors": 0,
+                "totalSuccess": 1,
+                "totalPublic": 0,
+                "submissions": [
+                  {
+                    "identifiers": {
+                      "localID": "a5303f14-d570-492c-aaa8-b258e957fb6d",
+                      "clinvarLocalKey": "a5303f14-d570-492c-aaa8-b258e957fb6d",
+                      "localKey": "a5303f14-d570-492c-aaa8-b258e957fb6d",
+                      "clinvarAccession": "SCV001573090"
+                    },
+                    "processingStatus": "Success"
+                  }
+                ]
+              }
+            }
+          ],
+          "objects": []
+        }
+      ]
+    }
+  ]
+}
