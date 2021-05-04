@@ -1,0 +1,56 @@
+{
+    "clinvarSubmission": [
+        {
+            "assertionCriteria": {
+                "citation": {
+                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                },
+                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+            },
+            "clinicalSignificance": {
+                "citation": [
+                    {
+                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/98ed23b5-7557-477d-af0e-20f02ed05e0e"
+                    }
+                ],
+                "clinicalSignificanceDescription": "Pathogenic",
+                "comment": "The c.166_193dup (p.Ala65Valfs*82) variant is a 28-bp duplication causing a frameshift that is predicted to introduce a premature stop codon and expected to result in nonsense-mediated mRNA decay (PVS1). This variant is completely absent from all population databases (gnomAD v2.1.1 and v3) with at least 20x coverage for RUNX1 (PM2). The variant has not been reported in FPD/AML patients in the literature to the best of our knowledge; however one patient meeting RUNX1-phenotype criteria is reported from a clinical laboratory (PS4_Supporting; SCV000820350.2). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PM2, PS4_Supporting.",
+                "dateLastEvaluated": "2021-01-11",
+                "modeOfInheritance": "Autosomal dominant inheritance"
+            },
+            "conditionSet": {
+                "condition": [
+                    {
+                        "db": "MONDO",
+                        "id": "MONDO:0011071"
+                    }
+                ]
+            },
+            "localID": "98ed23b5-7557-477d-af0e-20f02ed05e0e",
+            "localKey": "98ed23b5-7557-477d-af0e-20f02ed05e0e",
+            "observedIn": [
+                {
+                    "collectionMethod": "curation",
+                    "alleleOrigin": "germline",
+                    "affectedStatus": "unknown",
+                    "numberOfIndividuals": 0
+                }
+            ],
+            "recordStatus": "novel",
+            "releaseStatus": "public",
+            "variantSet": {
+                "variant": [
+                    {
+                        "gene": [
+                            {
+                                "symbol": "RUNX1"
+                            }
+                        ],
+                        "hgvs": "NC_000021.9:g.34887005_34887032dup"
+                    }
+                ]
+            }
+        }
+    ],
+    "submissionName": "MyeloMalig_20210210_API"
+}

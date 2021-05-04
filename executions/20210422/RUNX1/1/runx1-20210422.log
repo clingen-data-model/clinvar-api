@@ -1,0 +1,433 @@
+Submitting executions/20210422/RUNX1/1/submissions/submission-5-603cd528-c485-4e30-934a-cabde6c6d80d.json
+Submitting entries [['603cd528-c485-4e30-934a-cabde6c6d80d']] for submission MyeloMalig_20210210_API
+POST https://submit.ncbi.nlm.nih.gov/api/v1/submissions/
+{
+    "actions": [
+        {
+            "type": "AddData",
+            "targetDb": "clinvar",
+            "data": {
+                "content": {
+                    "clinvarSubmission": [
+                        {
+                            "assertionCriteria": {
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                                },
+                                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/603cd528-c485-4e30-934a-cabde6c6d80d"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The c.351+1G>A is a splice donor variant that is predicted to introduce exon 4 skipping and a frameshift with a premature stop codon and expected to result in nonsense-mediated mRNA decay (PVS1). This variant is completely absent from all population databases with at least 20x coverage for RUNX1 (gnomAD v2.1.1 and v3). This variant has been reported in two probands meeting at least one of the RUNX1-phenotypic criteria (PS4_Moderate; PMID: 27931139). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PM2, PS4_Supporting.",
+                                "dateLastEvaluated": "2021-01-11",
+                                "modeOfInheritance": "Autosomal dominant inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0011071"
+                                    }
+                                ]
+                            },
+                            "localID": "603cd528-c485-4e30-934a-cabde6c6d80d",
+                            "localKey": "603cd528-c485-4e30-934a-cabde6c6d80d",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "RUNX1"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000021.9:g.34886842C>T"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "submissionName": "MyeloMalig_20210210_API"
+                }
+            }
+        }
+    ]
+}
+Successful submission
+Response code 201
+< Date: Thu, 22 Apr 2021 16:12:52 GMT
+< Server: Apache
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Content-Type: application/json; charset=UTF-8
+< content-encoding: gzip
+< content-length: 45
+< Set-Cookie: ncbi_sid=616817EDCC94FA60%5F044BSID; Max-Age=31536000; Domain=.nih.gov; Path=/; $x-enc=URI_ENCODING
+< X-UA-Compatible: IE=Edge
+< X-XSS-Protection: 1; mode=block
+< Keep-Alive: timeout=5, max=100
+< Connection: Keep-Alive
+{"id":"SUB9521833"}
+Traceback (most recent call last):
+  File "clinvar_api/main.py", line 103, in <module>
+    sys.exit(main(argv))
+  File "clinvar_api/main.py", line 87, in main
+    sub_id = submission_response["id"]
+TypeError: string indices must be integers
+# ADDED MANUALLY
+>>> do_status_check("SUB9521833", api_key)
+GET https://submit.ncbi.nlm.nih.gov/api/v1/submissions/SUB9521833/actions
+{'actions': [{'id': 'SUB9521833-1', 'targetDb': 'clinvar', 'status': 'processing', 'updated': '2021-04-22T16:13:07.185712Z', 'responses': [{'status': 'processing', 'message': {'severity': 'info', 'errorCode': None, 'text': 'Your ClinVar submission processing status is "In processing".'}, 'files': [], 'objects': []}]}]}
+Submitting executions/20210422/RUNX1/1/submissions/submission-6-369b5ad5-da61-4f82-b250-fca73fbd9ae4.json
+Submitting entries [['369b5ad5-da61-4f82-b250-fca73fbd9ae4']] for submission MyeloMalig_20210210_API
+POST https://submit.ncbi.nlm.nih.gov/api/v1/submissions/
+{
+    "actions": [
+        {
+            "type": "AddData",
+            "targetDb": "clinvar",
+            "data": {
+                "content": {
+                    "clinvarSubmission": [
+                        {
+                            "assertionCriteria": {
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                                },
+                                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/369b5ad5-da61-4f82-b250-fca73fbd9ae4"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The c.610C>T (Arg204Ter) variant is a nonsense variant that is predicted to introduce a premature stop codon in exon 5/8 and expected to result in nonsense-mediated mRNA decay (PVS1). It is completely absent from gnomAD v2.1.1 and v3 with at least 20x coverage for RUNX1 (PM2). This variant has been reported in three probands meeting at least one of the RUNX1- phenotypic criteria (PS4_Moderate; PMID: 32165484, 10508512, 26492932). It was also found to co-segregate with disease in multiple affected family members, with eight meioses observed in across 3 families (PP1_Strong; PMID: 10508512, 26492932 , 32165484). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PP1_Strong, PS4_Moderate, PM2.",
+                                "dateLastEvaluated": "2021-01-11",
+                                "modeOfInheritance": "Autosomal dominant inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0011071"
+                                    }
+                                ]
+                            },
+                            "localID": "369b5ad5-da61-4f82-b250-fca73fbd9ae4",
+                            "localKey": "369b5ad5-da61-4f82-b250-fca73fbd9ae4",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "RUNX1"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000021.9:g.34859477G>A"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "submissionName": "MyeloMalig_20210210_API"
+                }
+            }
+        }
+    ]
+}
+Successful submission
+Response code 201
+< Date: Thu, 22 Apr 2021 16:15:51 GMT
+< Server: Apache
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Content-Type: application/json; charset=UTF-8
+< content-encoding: gzip
+< content-length: 45
+< Set-Cookie: ncbi_sid=03542A6DE277D09B%5F9871SID; Max-Age=31536000; Domain=.nih.gov; Path=/; $x-enc=URI_ENCODING
+< X-UA-Compatible: IE=Edge
+< X-XSS-Protection: 1; mode=block
+< Keep-Alive: timeout=5, max=100
+< Connection: Keep-Alive
+{"id":"SUB9521834"}
+GET https://submit.ncbi.nlm.nih.gov/api/v1/submissions/SUB9521834/actions
+{'actions': [{'id': 'SUB9521834-1', 'targetDb': 'clinvar', 'status': 'submitted', 'updated': '2021-04-22T16:15:52.338549Z', 'responses': []}]}
+Submitting executions/20210422/RUNX1/1/submissions/submission-7-98ed23b5-7557-477d-af0e-20f02ed05e0e.json
+Submitting entries [['98ed23b5-7557-477d-af0e-20f02ed05e0e']] for submission MyeloMalig_20210210_API
+POST https://submit.ncbi.nlm.nih.gov/api/v1/submissions/
+{
+    "actions": [
+        {
+            "type": "AddData",
+            "targetDb": "clinvar",
+            "data": {
+                "content": {
+                    "clinvarSubmission": [
+                        {
+                            "assertionCriteria": {
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                                },
+                                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/98ed23b5-7557-477d-af0e-20f02ed05e0e"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The c.166_193dup (p.Ala65Valfs*82) variant is a 28-bp duplication causing a frameshift that is predicted to introduce a premature stop codon and expected to result in nonsense-mediated mRNA decay (PVS1). This variant is completely absent from all population databases (gnomAD v2.1.1 and v3) with at least 20x coverage for RUNX1 (PM2). The variant has not been reported in FPD/AML patients in the literature to the best of our knowledge; however one patient meeting RUNX1-phenotype criteria is reported from a clinical laboratory (PS4_Supporting; SCV000820350.2). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PM2, PS4_Supporting.",
+                                "dateLastEvaluated": "2021-01-11",
+                                "modeOfInheritance": "Autosomal dominant inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0011071"
+                                    }
+                                ]
+                            },
+                            "localID": "98ed23b5-7557-477d-af0e-20f02ed05e0e",
+                            "localKey": "98ed23b5-7557-477d-af0e-20f02ed05e0e",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "RUNX1"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000021.9:g.34887005_34887032dup"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "submissionName": "MyeloMalig_20210210_API"
+                }
+            }
+        }
+    ]
+}
+Successful submission
+Response code 201
+< Date: Thu, 22 Apr 2021 16:16:44 GMT
+< Server: Apache
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Content-Type: application/json; charset=UTF-8
+< content-encoding: gzip
+< content-length: 45
+< Set-Cookie: ncbi_sid=1F8B6F4709A33381%5F44E9SID; Max-Age=31536000; Domain=.nih.gov; Path=/; $x-enc=URI_ENCODING
+< X-UA-Compatible: IE=Edge
+< X-XSS-Protection: 1; mode=block
+< Keep-Alive: timeout=5, max=100
+< Connection: Keep-Alive
+{"id":"SUB9521835"}
+GET https://submit.ncbi.nlm.nih.gov/api/v1/submissions/SUB9521835/actions
+{'actions': [{'id': 'SUB9521835-1', 'targetDb': 'clinvar', 'status': 'submitted', 'updated': '2021-04-22T16:16:44.646535Z', 'responses': []}]}
+Submitting executions/20210422/RUNX1/1/submissions/submission-8-2bedec2a-8416-4eac-980c-34c0172629cd.json
+Submitting entries [['2bedec2a-8416-4eac-980c-34c0172629cd']] for submission MyeloMalig_20210210_API
+POST https://submit.ncbi.nlm.nih.gov/api/v1/submissions/
+{
+    "actions": [
+        {
+            "type": "AddData",
+            "targetDb": "clinvar",
+            "data": {
+                "content": {
+                    "clinvarSubmission": [
+                        {
+                            "assertionCriteria": {
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                                },
+                                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/2bedec2a-8416-4eac-980c-34c0172629cd"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Likely pathogenic",
+                                "comment": "The c.820del (p.Gln274AsnfsTer37) variant is a frameshift variant that is not expected to result in nonsense-mediated mRNA decay, but the predicted truncated/altered region (removes aa 310-480) is critical to protein function (PVS1_Strong). The variant is absent from gnomAD v2.1.1 and v3 with at least 20x coverage for RUNX1. It is not reported in the germ line in patients with FPD/AML in the literature, to the best of our knowledge. In summary, this variant meets criteria to be classified as likely pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1_Strong, PM2.",
+                                "dateLastEvaluated": "2021-01-11",
+                                "modeOfInheritance": "Autosomal recessive inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0011071"
+                                    }
+                                ]
+                            },
+                            "localID": "2bedec2a-8416-4eac-980c-34c0172629cd",
+                            "localKey": "2bedec2a-8416-4eac-980c-34c0172629cd",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "RUNX1"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000021.9:g.34799449del"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "submissionName": "MyeloMalig_20210210_API"
+                }
+            }
+        }
+    ]
+}
+Successful submission
+Response code 201
+< Date: Thu, 22 Apr 2021 16:17:00 GMT
+< Server: Apache
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Content-Type: application/json; charset=UTF-8
+< content-encoding: gzip
+< content-length: 45
+< Set-Cookie: ncbi_sid=25FE16AF79B608D4%5F0AF4SID; Max-Age=31536000; Domain=.nih.gov; Path=/; $x-enc=URI_ENCODING
+< X-UA-Compatible: IE=Edge
+< X-XSS-Protection: 1; mode=block
+< Keep-Alive: timeout=5, max=100
+< Connection: Keep-Alive
+{"id":"SUB9521836"}
+GET https://submit.ncbi.nlm.nih.gov/api/v1/submissions/SUB9521836/actions
+{'actions': [{'id': 'SUB9521836-1', 'targetDb': 'clinvar', 'status': 'submitted', 'updated': '2021-04-22T16:17:01.416802Z', 'responses': []}]}
+Submitting executions/20210422/RUNX1/1/submissions/submission-9-a5303f14-d570-492c-aaa8-b258e957fb6d.json
+Submitting entries [['a5303f14-d570-492c-aaa8-b258e957fb6d']] for submission MyeloMalig_20210210_API
+POST https://submit.ncbi.nlm.nih.gov/api/v1/submissions/
+{
+    "actions": [
+        {
+            "type": "AddData",
+            "targetDb": "clinvar",
+            "data": {
+                "content": {
+                    "clinvarSubmission": [
+                        {
+                            "assertionCriteria": {
+                                "citation": {
+                                    "url": "https://submit.ncbi.nlm.nih.gov/ft/byid/wzxvueak/clingen_myelomalig_acmg_specifications_v1.pdf"
+                                },
+                                "method": "ClinGen MyeloMalig ACMG Specifications v1"
+                            },
+                            "clinicalSignificance": {
+                                "citation": [
+                                    {
+                                        "url": "https://erepo.clinicalgenome.org/evrepo/ui/interpretation/a5303f14-d570-492c-aaa8-b258e957fb6d"
+                                    }
+                                ],
+                                "clinicalSignificanceDescription": "Pathogenic",
+                                "comment": "The c.567C>G (Tyr189Ter) variant is a nonsense variant that is predicted to introduce a premature stop codon in exon 5/8 and expected to result in nonsense-mediated mRNA decay (PVS1). This variant is completely absent from all population databases with at least 20x coverage for RUNX1 (gnomAD v2.1.1 and v3). This variant has been reported in one proband meeting at least one of the RUNX1- phenotypic criteria (PS4_ Supporting; PMID: 31309983). In summary, this variant meets criteria to be classified as pathogenic. ACMG/AMP criteria applied, as specified by the Myeloid Malignancy Variant Curation Expert Panel for RUNX1: PVS1, PM2, PS4_Supporting.",
+                                "dateLastEvaluated": "2021-01-11",
+                                "modeOfInheritance": "Autosomal dominant inheritance"
+                            },
+                            "conditionSet": {
+                                "condition": [
+                                    {
+                                        "db": "MONDO",
+                                        "id": "MONDO:0011071"
+                                    }
+                                ]
+                            },
+                            "localID": "a5303f14-d570-492c-aaa8-b258e957fb6d",
+                            "localKey": "a5303f14-d570-492c-aaa8-b258e957fb6d",
+                            "observedIn": [
+                                {
+                                    "collectionMethod": "curation",
+                                    "alleleOrigin": "germline",
+                                    "affectedStatus": "unknown",
+                                    "numberOfIndividuals": 0
+                                }
+                            ],
+                            "recordStatus": "novel",
+                            "releaseStatus": "public",
+                            "variantSet": {
+                                "variant": [
+                                    {
+                                        "gene": [
+                                            {
+                                                "symbol": "RUNX1"
+                                            }
+                                        ],
+                                        "hgvs": "NC_000021.9:g.34859520G>C"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "submissionName": "MyeloMalig_20210210_API"
+                }
+            }
+        }
+    ]
+}
+Successful submission
+Response code 201
+< Date: Thu, 22 Apr 2021 16:17:12 GMT
+< Server: Apache
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Content-Type: application/json; charset=UTF-8
+< content-encoding: gzip
+< content-length: 45
+< Set-Cookie: ncbi_sid=5963CD942DF674F3%5F29FCSID; Max-Age=31536000; Domain=.nih.gov; Path=/; $x-enc=URI_ENCODING
+< X-UA-Compatible: IE=Edge
+< X-XSS-Protection: 1; mode=block
+< Keep-Alive: timeout=5, max=100
+< Connection: Keep-Alive
+{"id":"SUB9521837"}
+GET https://submit.ncbi.nlm.nih.gov/api/v1/submissions/SUB9521837/actions
+{'actions': [{'id': 'SUB9521837-1', 'targetDb': 'clinvar', 'status': 'submitted', 'updated': '2021-04-22T16:17:13.314494Z', 'responses': []}]}

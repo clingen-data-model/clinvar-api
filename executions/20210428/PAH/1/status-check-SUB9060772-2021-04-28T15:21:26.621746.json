@@ -1,0 +1,35 @@
+{
+  "actions": [
+    {
+      "id": "SUB9060772-1",
+      "targetDb": "clinvar",
+      "status": "processed",
+      "updated": "2021-02-14T07:46:05.787700Z",
+      "responses": [
+        {
+          "status": "processed",
+          "message": null,
+          "files": [],
+          "objects": [
+            {
+              "targetDb": "clinvar",
+              "accession": null,
+              "content": {
+                "clinvarStatus": "Public",
+                "submissions": [
+                  {
+                    "identifiers": {
+                      "local ID": "04f7f269-ffcb-41d8-a7db-01b490cb4516",
+                      "linking ID": "04f7f269-ffcb-41d8-a7db-01b490cb4516",
+                      "SCV accession": "SCV001478832"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

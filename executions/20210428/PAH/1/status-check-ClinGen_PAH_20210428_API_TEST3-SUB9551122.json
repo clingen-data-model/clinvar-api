@@ -1,0 +1,11 @@
+{
+    "actions": [
+        {
+            "id": "SUB9551122-1",
+            "targetDb": "clinvar",
+            "status": "submitted",
+            "updated": "2021-04-28T18:34:43.155311Z",
+            "responses": []
+        }
+    ]
+}
